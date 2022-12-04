@@ -22,90 +22,111 @@ Partial Class FormLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLogin))
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.OK = New System.Windows.Forms.Button()
+        Me.TxtPassword = New System.Windows.Forms.TextBox()
+        Me.txtNama = New System.Windows.Forms.TextBox()
+        Me.PasswordLabel = New System.Windows.Forms.Label()
+        Me.UsernameLabel = New System.Windows.Forms.Label()
+        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
+        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button2
+        'Cancel
         '
-        Me.Button2.Location = New System.Drawing.Point(299, 129)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(126, 68)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Cancel.Location = New System.Drawing.Point(452, 249)
+        Me.Cancel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Size = New System.Drawing.Size(141, 35)
+        Me.Cancel.TabIndex = 12
+        Me.Cancel.Text = "&Cancel"
         '
-        'TextBox2
+        'OK
         '
-        Me.TextBox2.Location = New System.Drawing.Point(171, 66)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(88)
-        Me.TextBox2.Size = New System.Drawing.Size(254, 38)
-        Me.TextBox2.TabIndex = 10
+        Me.OK.Location = New System.Drawing.Point(298, 249)
+        Me.OK.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.OK.Name = "OK"
+        Me.OK.Size = New System.Drawing.Size(141, 35)
+        Me.OK.TabIndex = 11
+        Me.OK.Text = "&OK"
         '
-        'TextBox1
+        'TxtPassword
         '
-        Me.TextBox1.Location = New System.Drawing.Point(171, 28)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(254, 38)
-        Me.TextBox1.TabIndex = 9
+        Me.TxtPassword.Location = New System.Drawing.Point(263, 156)
+        Me.TxtPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(88)
+        Me.TxtPassword.Size = New System.Drawing.Size(328, 26)
+        Me.TxtPassword.TabIndex = 10
+        Me.TxtPassword.Text = "ADMIN"
         '
-        'Button1
+        'txtNama
         '
-        Me.Button1.Location = New System.Drawing.Point(171, 129)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(126, 68)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Login"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.txtNama.Location = New System.Drawing.Point(263, 69)
+        Me.txtNama.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNama.Name = "txtNama"
+        Me.txtNama.Size = New System.Drawing.Size(328, 26)
+        Me.txtNama.TabIndex = 8
+        Me.txtNama.Text = "ADMIN"
         '
-        'Label2
+        'PasswordLabel
         '
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(7, 66)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(144, 38)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Password"
+        Me.PasswordLabel.Location = New System.Drawing.Point(260, 126)
+        Me.PasswordLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.PasswordLabel.Name = "PasswordLabel"
+        Me.PasswordLabel.Size = New System.Drawing.Size(330, 35)
+        Me.PasswordLabel.TabIndex = 9
+        Me.PasswordLabel.Text = "&Password"
+        Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label1
+        'UsernameLabel
         '
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(7, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 38)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Kode Admin"
+        Me.UsernameLabel.Location = New System.Drawing.Point(260, 38)
+        Me.UsernameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.UsernameLabel.Name = "UsernameLabel"
+        Me.UsernameLabel.Size = New System.Drawing.Size(330, 35)
+        Me.UsernameLabel.TabIndex = 6
+        Me.UsernameLabel.Text = "&User name"
+        Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LogoPictureBox
+        '
+        Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
+        Me.LogoPictureBox.Location = New System.Drawing.Point(2, 1)
+        Me.LogoPictureBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.LogoPictureBox.Name = "LogoPictureBox"
+        Me.LogoPictureBox.Size = New System.Drawing.Size(248, 297)
+        Me.LogoPictureBox.TabIndex = 7
+        Me.LogoPictureBox.TabStop = False
         '
         'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(443, 213)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(602, 296)
+        Me.Controls.Add(Me.Cancel)
+        Me.Controls.Add(Me.OK)
+        Me.Controls.Add(Me.TxtPassword)
+        Me.Controls.Add(Me.txtNama)
+        Me.Controls.Add(Me.PasswordLabel)
+        Me.Controls.Add(Me.UsernameLabel)
+        Me.Controls.Add(Me.LogoPictureBox)
         Me.Name = "FormLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormLogin"
+        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Cancel As Button
+    Friend WithEvents OK As Button
+    Friend WithEvents TxtPassword As TextBox
+    Friend WithEvents txtNama As TextBox
+    Friend WithEvents PasswordLabel As Label
+    Friend WithEvents UsernameLabel As Label
+    Friend WithEvents LogoPictureBox As PictureBox
 End Class

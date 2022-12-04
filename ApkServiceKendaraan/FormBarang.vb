@@ -1,136 +1,140 @@
 ﻿Imports System.Data.Odbc
+
 Public Class FormBarang
-    Sub KondisiAwal()
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        TextBox3.Text = ""
-        TextBox4.Text = ""
 
-        TextBox1.Enabled = False
-        TextBox2.Enabled = False
-        TextBox3.Enabled = False
-        TextBox4.Enabled = False
+    Sub Kosongkan()
+        TextBox1.Clear()
+        TextBox2.Clear()
+        TextBox3.Clear()
+        TextBox4.Clear()
+        TextBox5.Text = ""
+        TextBox1.Focus()
+    End Sub
 
-        Button1.Enabled = True
-        Button2.Enabled = True
-        Button3.Enabled = True
-        Button1.Text = "Input"
-        Button2.Text = "Edit"
-        Button3.Text = "Hapus"
-        Button4.Text = "Tutup"
-        Call koneksi()
-        da = New OdbcDataAdapter("Select Kode_Barang,Nama_Barang,Harga_Barang,Stok from barang", conn)
+    Sub DataBaru()
+        TextBox2.Clear()
+        TextBox3.Clear()
+        TextBox4.Clear()
+        TextBox5.Text = ""
+        TextBox2.Focus()
+    End Sub
+
+    Sub TampilGrid()
+        da = New OdbcDataAdapter("select * from barang where kode_barang<>'-'", conn)
         ds = New DataSet
-        da.Fill(ds, "barang")
-        DataGridView1.DataSource = ds.Tables("barang")
-        DataGridView1.ReadOnly = True
-        'untuk memunculkan data dari databaase ke datagridview'
+        da.Fill(ds)
+        DGV.DataSource = ds.Tables(0)
+        DGV.ReadOnly = True
     End Sub
-    Sub SiapIsi()
-        TextBox1.Enabled = True
-        TextBox2.Enabled = True
-        TextBox3.Enabled = True
-        TextBox4.Enabled = True
-
+    Sub Ketemu()
+        On Error Resume Next
+        TextBox2.Text = rd.Item("Nama_Barang")
+        TextBox3.Text = rd.Item("Harga_barang")
+        TextBox4.Text = rd.Item("Stok")
+        TextBox2.Focus()
     End Sub
-
-    Private Sub FormBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call KondisiAwal()
-    End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If Button1.Text = "Input" Then
-            Button1.Text = "Simpan"
-            Button2.Enabled = False
-            Button3.Enabled = False
-            Button4.Text = "Batal"
-            Call SiapIsi()
-        Else
-            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Then
-                MsgBox("Silakan isi semua Field")
-            Else
-                Call koneksi()
-                Dim InputData As String = "insert into barang value('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "')"
-                cmd = New OdbcCommand(InputData, conn)
-                cmd.ExecuteNonQuery()
-                MsgBox("Input Data Berhasil")
-                Call KondisiAwal()
-            End If
-        End If
+    Sub CariData()
+        cmd = New OdbcCommand("select * from barang where Kode_Barang='" & TextBox1.Text & "'", conn)
+        rd = cmd.ExecuteReader
+        rd.Read()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If Button2.Text = "Edit" Then
-            Button2.Text = "Simpan"
-            Button1.Enabled = False
-            Button3.Enabled = False
-            Button4.Text = "Batal"
-            Call SiapIsi()
-        Else
-            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Then
-                MsgBox("Silakan isi semua Field")
-            Else
-                Call koneksi()
-                Dim UpdateData As String = "Update barang set Nama_Barang='" & TextBox2.Text & "',Harga_Barang='" & TextBox3.Text & "',Stok='" & TextBox4.Text & "'where Kode_Barang='" & TextBox1.Text & "'"
-                cmd = New OdbcCommand(UpdateData, conn)
-                cmd.ExecuteNonQuery()
-                MsgBox("Update Data Berhasil")
-                Call KondisiAwal()
-            End If
-        End If
+    Private Sub Barang_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call koneksi()
+        Call Kosongkan()
+        Call TampilGrid()
     End Sub
 
-    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+    Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
         If e.KeyChar = Chr(13) Then
-            Call koneksi()
-            cmd = New OdbcCommand("Select * From barang where Kode_Barang='" & TextBox1.Text & "'", conn)
-            rd = cmd.ExecuteReader
-            rd.Read()
+            Call CariData()
+            If rd.HasRows Then
+                Call Ketemu()
+            Else
+                Call DataBaru()
+            End If
+        End If
+    End Sub
+
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Try
+            Call CariData()
             If Not rd.HasRows Then
-                MsgBox("Kode User tidak Ada")
-            Else
-                TextBox1.Text = rd.Item("Kode_Barang")
-                TextBox2.Text = rd.Item("Nama_Barang")
-                TextBox3.Text = rd.Item("Harga_Barang")
-                TextBox4.Text = rd.Item("Stok")
-
-            End If
-        End If
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        If Button4.Text = "Tutup" Then
-            Me.Close()
-        Else
-            Call KondisiAwal()
-        End If
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If Button3.Text = "Hapus" Then
-            Button3.Text = "Delete"
-            Button1.Enabled = False
-            Button2.Enabled = False
-            Button4.Text = "Batal"
-            Call SiapIsi()
-        Else
-            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Then
-                MsgBox("Silakan isi semua Field")
-            Else
-                Call koneksi()
-                Dim HapusData As String = "Delete from barang where Kode_Barang='" & TextBox1.Text & "'"
-                cmd = New OdbcCommand(HapusData, conn)
+                Dim simpan As String = "insert into barang values ('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "')"
+                cmd = New OdbcCommand(simpan, conn)
                 cmd.ExecuteNonQuery()
-                MsgBox("Hapus Data Berhasil")
-                Call KondisiAwal()
+            Else
+                Dim edit As String = "update barang set Nama_Barang='" & TextBox2.Text & "',Harga_Barang='" & TextBox3.Text & "',Stok='" & TextBox4.Text & "' where kode_Barang='" & TextBox1.Text & "'"
+                cmd = New OdbcCommand(edit, conn)
+                cmd.ExecuteNonQuery()
             End If
+            Call Kosongkan()
+            Call TampilGrid()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        If TextBox1.Text = "" Then
+            MsgBox("kode harus diisi")
+            TextBox1.Focus()
+            Exit Sub
+        End If
+        Call CariData()
+        If Not rd.HasRows Then
+            MsgBox("kode tidak terdaftar")
+            TextBox1.Clear()
+            TextBox1.Focus()
+            Exit Sub
+        End If
+
+        If MessageBox.Show("yakin akan dihapus...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            Dim hapus As String = "delete  from barang where kode_Barang='" & TextBox1.Text & "'"
+            cmd = New OdbcCommand(hapus, conn)
+            cmd.ExecuteNonQuery()
+            Call Kosongkan()
+            Call TampilGrid()
+        Else
+            Call Kosongkan()
         End If
     End Sub
 
-    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
-        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Call Kosongkan()
     End Sub
 
-    Private Sub TextBox4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox4.KeyPress
-        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Me.Close()
     End Sub
+
+    Private Sub TextBox4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox5.TextChanged
+        da = New OdbcDataAdapter("select * from barang where Nama_Barang like '%" & TextBox5.Text & "%'", conn)
+        ds = New DataSet
+        da.Fill(ds)
+        DGV.DataSource = ds.Tables(0)
+        DGV.ReadOnly = True
+    End Sub
+
+    Private Sub DGV_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DGV.CellMouseClick
+        On Error Resume Next
+        TextBox1.Text = DGV.Rows(e.RowIndex).Cells(0).Value
+        TextBox2.Text = DGV.Rows(e.RowIndex).Cells(1).Value
+        TextBox3.Text = DGV.Rows(e.RowIndex).Cells(2).Value
+        TextBox4.Text = DGV.Rows(e.RowIndex).Cells(3).Value
+    End Sub
+
+    Private Sub TextBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox3.KeyPress
+        If Not (e.KeyChar >= "0" And e.KeyChar <= "9" Or e.KeyChar = vbBack) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBox4_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox4.KeyPress
+        If Not (e.KeyChar >= "0" And e.KeyChar <= "9" Or e.KeyChar = vbBack) Then
+            e.Handled = True
+        End If
+    End Sub
+
+
 End Class

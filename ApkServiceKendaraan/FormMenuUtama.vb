@@ -1,36 +1,74 @@
-﻿Public Class FormMenuUtama
-    Sub Terkunci()
-        LoginToolStripMenuItem.Enabled = True
-        LogOutToolStripMenuItem.Enabled = False
-        MasterToolStripMenuItem.Enabled = False
-        TransaksiToolStripMenuItem.Enabled = False
-        LaporanToolStripMenuItem.Enabled = False
-    End Sub
-    Private Sub LoginToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoginToolStripMenuItem.Click
-        FormLogin.ShowDialog()
+﻿Imports System.Data.Odbc
+
+Public Class FormMenuUtama
+
+    Private Sub MenuUtama_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+        If e.KeyChar = Chr(27) Then
+            If MessageBox.Show("Tutup aplikasi...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                End
+            End If
+        End If
     End Sub
 
-    Private Sub FormMenuUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call Terkunci()
+    Private Sub MenuUtama_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        On Error Resume Next
+        Call koneksi()
+        PictureBox1.Load("wall2.jpg")
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
     End Sub
 
-    Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
-        Call Terkunci()
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        FormUser.Show()
     End Sub
 
-    Private Sub KeluarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KeluarToolStripMenuItem.Click
-        End
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        FormBarang.Show()
     End Sub
 
-    Private Sub UserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UserToolStripMenuItem.Click
-        FormUser.ShowDialog()
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        FormJasa.Show()
     End Sub
 
-    Private Sub BarangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BarangToolStripMenuItem.Click
-        FormBarang.ShowDialog()
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        FormTransaksiService.Show()
     End Sub
 
-    Private Sub JasaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JasaToolStripMenuItem.Click
-        FormJasa.ShowDialog()
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+        'LaporanMaster.Show()
+    End Sub
+
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        'LaporanService.Show()
+    End Sub
+
+    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button18.Click
+        FormHistoriService.Show()
+    End Sub
+
+    Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
+        Me.Close()
+        FormLogin.Show()
+        FormLogin.txtNama.Clear()
+        FormLogin.TxtPassword.Clear()
+        FormLogin.txtNama.Focus()
+    End Sub
+
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+        If MessageBox.Show("Tutup aplikasi...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            End
+        End If
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+
+        Call koneksi()
+        cmd = New OdbcCommand("delete  from service", conn)
+        cmd.ExecuteNonQuery()
+
+        cmd = New OdbcCommand("delete  from DETAIL", conn)
+        cmd.ExecuteNonQuery()
+
+        MsgBox("data transaksi berhasil dihapus")
+
     End Sub
 End Class
