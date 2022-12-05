@@ -1,7 +1,6 @@
 ﻿Imports System.Data.Odbc
 
 Public Class FormMenuUtama
-
     Private Sub MenuUtama_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = Chr(27) Then
             If MessageBox.Show("Tutup aplikasi...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
@@ -71,4 +70,5 @@ Public Class FormMenuUtama
         MsgBox("data transaksi berhasil dihapus")
 
     End Sub
+
 End Class
