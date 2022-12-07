@@ -1,6 +1,8 @@
 ﻿Imports System.Data.Odbc
+Imports Microsoft.VisualBasic.ApplicationServices
 
 Public Class FormMenuUtama
+
     Private Sub MenuUtama_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = Chr(27) Then
             If MessageBox.Show("Tutup aplikasi...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
@@ -11,7 +13,7 @@ Public Class FormMenuUtama
 
     Private Sub MenuUtama_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
-        Call koneksi()
+        Call Koneksi()
         PictureBox1.Load("wall2.jpg")
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
     End Sub
@@ -29,15 +31,15 @@ Public Class FormMenuUtama
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        FormTransaksiService.Show()
+        FormTransaksi.Show()
     End Sub
 
     Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
-        'LaporanMaster.Show()
+        FormLaporanMaster.Show()
     End Sub
 
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
-        'LaporanService.Show()
+        FormLaporanService.Show()
     End Sub
 
     Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button18.Click
@@ -60,15 +62,14 @@ Public Class FormMenuUtama
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
 
-        Call koneksi()
-        cmd = New OdbcCommand("delete  from service", conn)
-        cmd.ExecuteNonQuery()
+        Call Koneksi()
+        CMD = New OdbcCommand("delete  from service", CONN)
+        CMD.ExecuteNonQuery()
 
-        cmd = New OdbcCommand("delete  from DETAIL", conn)
-        cmd.ExecuteNonQuery()
+        CMD = New OdbcCommand("delete  from DETAIL", CONN)
+        CMD.ExecuteNonQuery()
 
         MsgBox("data transaksi berhasil dihapus")
 
     End Sub
-
 End Class

@@ -1,4 +1,5 @@
 ﻿Imports System.Data.Odbc
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class FormJasa
 
@@ -18,26 +19,26 @@ Public Class FormJasa
     End Sub
 
     Sub TampilGrid()
-        da = New OdbcDataAdapter("select * from jasa where Kode_Jasa<>'-'", conn)
-        ds = New DataSet
-        da.Fill(ds)
-        DGV.DataSource = ds.Tables(0)
+        DA = New OdbcDataAdapter("select * from jasa where kode_jasa<>'-'", CONN)
+        DS = New DataSet
+        DA.Fill(DS)
+        DGV.DataSource = DS.Tables(0)
         DGV.ReadOnly = True
     End Sub
     Sub Ketemu()
         On Error Resume Next
-        TextBox2.Text = rd.Item("Nama_Jasa")
-        TextBox3.Text = rd.Item("Harga_Jasa")
+        TextBox2.Text = DR.Item("nama_jasa")
+        TextBox3.Text = DR.Item("harga_jasa")
         TextBox2.Focus()
     End Sub
     Sub CariData()
-        cmd = New OdbcCommand("select * from jasa where Kode_Jasa='" & TextBox1.Text & "'", conn)
-        rd = cmd.ExecuteReader
-        rd.Read()
+        CMD = New OdbcCommand("select * from jasa where kode_jasa='" & TextBox1.Text & "'", CONN)
+        DR = CMD.ExecuteReader
+        DR.Read()
     End Sub
 
     Private Sub jasa_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Call koneksi()
+        Call Koneksi()
         Call Kosongkan()
         Call TampilGrid()
     End Sub
@@ -45,7 +46,7 @@ Public Class FormJasa
     Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
         If e.KeyChar = Chr(13) Then
             Call CariData()
-            If rd.HasRows Then
+            If DR.HasRows Then
                 Call Ketemu()
             Else
                 Call DataBaru()
@@ -57,14 +58,14 @@ Public Class FormJasa
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Try
             Call CariData()
-            If Not rd.HasRows Then
+            If Not DR.HasRows Then
                 Dim simpan As String = "insert into jasa values ('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "')"
-                cmd = New OdbcCommand(simpan, conn)
-                cmd.ExecuteNonQuery()
+                CMD = New OdbcCommand(simpan, CONN)
+                CMD.ExecuteNonQuery()
             Else
-                Dim edit As String = "update jasa set Nama_Jasa='" & TextBox2.Text & "',Harga_Jasa='" & TextBox3.Text & "' where Kode_Jasa='" & TextBox1.Text & "'"
-                cmd = New OdbcCommand(edit, conn)
-                cmd.ExecuteNonQuery()
+                Dim edit As String = "update jasa set nama_jasa='" & TextBox2.Text & "',harga_jasa='" & TextBox3.Text & "' where kode_jasa='" & TextBox1.Text & "'"
+                CMD = New OdbcCommand(edit, CONN)
+                CMD.ExecuteNonQuery()
             End If
             Call Kosongkan()
             Call TampilGrid()
@@ -81,7 +82,7 @@ Public Class FormJasa
         End If
 
         Call CariData()
-        If Not rd.HasRows Then
+        If Not DR.HasRows Then
             MsgBox("kode tidak terdaftar")
             TextBox1.Clear()
             TextBox1.Focus()
@@ -89,9 +90,9 @@ Public Class FormJasa
         End If
 
         If MessageBox.Show("yakin akan dihapus...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            Dim hapus As String = "delete  from jasa where Kode_Jasa='" & TextBox1.Text & "'"
-            cmd = New OdbcCommand(hapus, conn)
-            cmd.ExecuteNonQuery()
+            Dim hapus As String = "delete  from jasa where kode_jasa='" & TextBox1.Text & "'"
+            CMD = New OdbcCommand(hapus, CONN)
+            CMD.ExecuteNonQuery()
             Call Kosongkan()
             Call TampilGrid()
         Else
@@ -108,10 +109,10 @@ Public Class FormJasa
     End Sub
 
     Private Sub TextBox4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox4.TextChanged
-        da = New OdbcDataAdapter("select * from jasa where Nama_Jasa like '%" & TextBox4.Text & "%'", conn)
-        ds = New DataSet
-        da.Fill(ds)
-        DGV.DataSource = ds.Tables(0)
+        DA = New OdbcDataAdapter("select * from jasa where nama_jasa like '%" & TextBox4.Text & "%'", CONN)
+        DS = New DataSet
+        DA.Fill(DS)
+        DGV.DataSource = DS.Tables(0)
         DGV.ReadOnly = True
     End Sub
 
@@ -129,3 +130,4 @@ Public Class FormJasa
         End If
     End Sub
 End Class
+

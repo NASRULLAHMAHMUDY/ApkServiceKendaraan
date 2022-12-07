@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FormTransaksiService
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FormTransaksi
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,14 @@ Partial Class FormTransaksiService
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.tbarisbarang = New System.Windows.Forms.Label()
         Me.tbarisjasa = New System.Windows.Forms.Label()
         Me.txtMontir = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.DGVJasa = New System.Windows.Forms.DataGridView()
-        Me.Kode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Jasa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TKeluhan = New System.Windows.Forms.TextBox()
         Me.TNopol = New System.Windows.Forms.TextBox()
         Me.TTotalharga = New System.Windows.Forms.Label()
@@ -46,6 +43,8 @@ Partial Class FormTransaksiService
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Kode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Jasa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DGV2 = New System.Windows.Forms.DataGridView()
         Me.DGV1 = New System.Windows.Forms.DataGridView()
         Me.TDibayar = New System.Windows.Forms.TextBox()
@@ -60,17 +59,18 @@ Partial Class FormTransaksiService
         Me.Nama = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.DGVJasa, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DGVJasa = New System.Windows.Forms.DataGridView()
+        Me.Harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGV1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVBarang, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVJasa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tbarisbarang
         '
         Me.tbarisbarang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tbarisbarang.Location = New System.Drawing.Point(15, 710)
+        Me.tbarisbarang.Location = New System.Drawing.Point(7, 711)
         Me.tbarisbarang.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.tbarisbarang.Name = "tbarisbarang"
         Me.tbarisbarang.Size = New System.Drawing.Size(150, 31)
@@ -79,7 +79,7 @@ Partial Class FormTransaksiService
         'tbarisjasa
         '
         Me.tbarisjasa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tbarisjasa.Location = New System.Drawing.Point(13, 343)
+        Me.tbarisjasa.Location = New System.Drawing.Point(5, 344)
         Me.tbarisjasa.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.tbarisjasa.Name = "tbarisjasa"
         Me.tbarisjasa.Size = New System.Drawing.Size(150, 31)
@@ -87,7 +87,7 @@ Partial Class FormTransaksiService
         '
         'txtMontir
         '
-        Me.txtMontir.Location = New System.Drawing.Point(331, 680)
+        Me.txtMontir.Location = New System.Drawing.Point(323, 681)
         Me.txtMontir.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtMontir.Name = "txtMontir"
         Me.txtMontir.Size = New System.Drawing.Size(158, 26)
@@ -96,7 +96,7 @@ Partial Class FormTransaksiService
         'Label8
         '
         Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label8.Location = New System.Drawing.Point(331, 644)
+        Me.Label8.Location = New System.Drawing.Point(323, 645)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(160, 31)
@@ -104,10 +104,20 @@ Partial Class FormTransaksiService
         Me.Label8.Text = "Montir"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'Label1
+        '
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label1.Location = New System.Drawing.Point(5, 7)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(150, 31)
+        Me.Label1.TabIndex = 89
+        Me.Label1.Text = "Nomor"
+        '
         'Label10
         '
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label10.Location = New System.Drawing.Point(501, 706)
+        Me.Label10.Location = New System.Drawing.Point(493, 707)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(160, 31)
@@ -115,42 +125,10 @@ Partial Class FormTransaksiService
         Me.Label10.Text = "Dibayar"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'DGVJasa
-        '
-        Me.DGVJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVJasa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Kode, Me.Jasa, Me.Harga})
-        Me.DGVJasa.Location = New System.Drawing.Point(13, 94)
-        Me.DGVJasa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.DGVJasa.Name = "DGVJasa"
-        Me.DGVJasa.RowHeadersWidth = 62
-        Me.DGVJasa.Size = New System.Drawing.Size(820, 231)
-        Me.DGVJasa.TabIndex = 103
-        '
-        'Kode
-        '
-        Me.Kode.HeaderText = "Kode"
-        Me.Kode.MinimumWidth = 8
-        Me.Kode.Name = "Kode"
-        Me.Kode.Width = 150
-        '
-        'Jasa
-        '
-        Me.Jasa.HeaderText = "Jasa"
-        Me.Jasa.MinimumWidth = 8
-        Me.Jasa.Name = "Jasa"
-        Me.Jasa.Width = 300
-        '
-        'Harga
-        '
-        Me.Harga.HeaderText = "Harga"
-        Me.Harga.MinimumWidth = 8
-        Me.Harga.Name = "Harga"
-        Me.Harga.Width = 150
-        '
         'TKeluhan
         '
         Me.TKeluhan.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TKeluhan.Location = New System.Drawing.Point(490, 37)
+        Me.TKeluhan.Location = New System.Drawing.Point(482, 38)
         Me.TKeluhan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TKeluhan.Name = "TKeluhan"
         Me.TKeluhan.Size = New System.Drawing.Size(576, 26)
@@ -159,7 +137,7 @@ Partial Class FormTransaksiService
         'TNopol
         '
         Me.TNopol.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TNopol.Location = New System.Drawing.Point(490, 6)
+        Me.TNopol.Location = New System.Drawing.Point(482, 7)
         Me.TNopol.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TNopol.Name = "TNopol"
         Me.TNopol.Size = New System.Drawing.Size(148, 26)
@@ -168,7 +146,7 @@ Partial Class FormTransaksiService
         'TTotalharga
         '
         Me.TTotalharga.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TTotalharga.Location = New System.Drawing.Point(670, 675)
+        Me.TTotalharga.Location = New System.Drawing.Point(662, 676)
         Me.TTotalharga.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TTotalharga.Name = "TTotalharga"
         Me.TTotalharga.Size = New System.Drawing.Size(150, 31)
@@ -179,7 +157,7 @@ Partial Class FormTransaksiService
         'TTLBiayaBarang
         '
         Me.TTLBiayaBarang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TTLBiayaBarang.Location = New System.Drawing.Point(670, 644)
+        Me.TTLBiayaBarang.Location = New System.Drawing.Point(662, 645)
         Me.TTLBiayaBarang.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TTLBiayaBarang.Name = "TTLBiayaBarang"
         Me.TTLBiayaBarang.Size = New System.Drawing.Size(150, 31)
@@ -190,7 +168,7 @@ Partial Class FormTransaksiService
         'TTanggal
         '
         Me.TTanggal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TTanggal.Location = New System.Drawing.Point(172, 40)
+        Me.TTanggal.Location = New System.Drawing.Point(164, 41)
         Me.TTanggal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TTanggal.Name = "TTanggal"
         Me.TTanggal.Size = New System.Drawing.Size(150, 31)
@@ -200,7 +178,7 @@ Partial Class FormTransaksiService
         'TTLBiayaService
         '
         Me.TTLBiayaService.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TTLBiayaService.Location = New System.Drawing.Point(670, 343)
+        Me.TTLBiayaService.Location = New System.Drawing.Point(662, 344)
         Me.TTLBiayaService.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TTLBiayaService.Name = "TTLBiayaService"
         Me.TTLBiayaService.Size = New System.Drawing.Size(150, 31)
@@ -211,7 +189,7 @@ Partial Class FormTransaksiService
         'TNomor
         '
         Me.TNomor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TNomor.Location = New System.Drawing.Point(172, 6)
+        Me.TNomor.Location = New System.Drawing.Point(164, 7)
         Me.TNomor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TNomor.Name = "TNomor"
         Me.TNomor.Size = New System.Drawing.Size(150, 31)
@@ -221,7 +199,7 @@ Partial Class FormTransaksiService
         'Label7
         '
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label7.Location = New System.Drawing.Point(501, 675)
+        Me.Label7.Location = New System.Drawing.Point(493, 676)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(160, 31)
@@ -231,7 +209,7 @@ Partial Class FormTransaksiService
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(501, 644)
+        Me.Label6.Location = New System.Drawing.Point(493, 645)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(160, 31)
@@ -241,7 +219,7 @@ Partial Class FormTransaksiService
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label5.Location = New System.Drawing.Point(511, 343)
+        Me.Label5.Location = New System.Drawing.Point(503, 344)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(150, 31)
@@ -251,7 +229,7 @@ Partial Class FormTransaksiService
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(331, 37)
+        Me.Label4.Location = New System.Drawing.Point(323, 38)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(150, 31)
@@ -261,7 +239,7 @@ Partial Class FormTransaksiService
         'Label3
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label3.Location = New System.Drawing.Point(331, 6)
+        Me.Label3.Location = New System.Drawing.Point(323, 7)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(150, 31)
@@ -271,7 +249,7 @@ Partial Class FormTransaksiService
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(13, 40)
+        Me.Label2.Location = New System.Drawing.Point(5, 41)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(150, 31)
@@ -288,18 +266,32 @@ Partial Class FormTransaksiService
         'Label9
         '
         Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label9.Location = New System.Drawing.Point(501, 737)
+        Me.Label9.Location = New System.Drawing.Point(493, 738)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(160, 31)
         Me.Label9.TabIndex = 110
         Me.Label9.Text = "Kembali"
         '
+        'Kode
+        '
+        Me.Kode.HeaderText = "Kode"
+        Me.Kode.MinimumWidth = 8
+        Me.Kode.Name = "Kode"
+        Me.Kode.Width = 150
+        '
+        'Jasa
+        '
+        Me.Jasa.HeaderText = "Jasa"
+        Me.Jasa.MinimumWidth = 8
+        Me.Jasa.Name = "Jasa"
+        Me.Jasa.Width = 300
+        '
         'DGV2
         '
         Me.DGV2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV2.Location = New System.Drawing.Point(853, 400)
+        Me.DGV2.Location = New System.Drawing.Point(845, 401)
         Me.DGV2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DGV2.Name = "DGV2"
         Me.DGV2.RowHeadersWidth = 62
@@ -310,7 +302,7 @@ Partial Class FormTransaksiService
         '
         Me.DGV1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV1.Location = New System.Drawing.Point(851, 94)
+        Me.DGV1.Location = New System.Drawing.Point(843, 95)
         Me.DGV1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DGV1.Name = "DGV1"
         Me.DGV1.RowHeadersWidth = 62
@@ -319,7 +311,7 @@ Partial Class FormTransaksiService
         '
         'TDibayar
         '
-        Me.TDibayar.Location = New System.Drawing.Point(670, 706)
+        Me.TDibayar.Location = New System.Drawing.Point(662, 707)
         Me.TDibayar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TDibayar.Name = "TDibayar"
         Me.TDibayar.Size = New System.Drawing.Size(148, 26)
@@ -329,7 +321,7 @@ Partial Class FormTransaksiService
         'TKembali
         '
         Me.TKembali.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TKembali.Location = New System.Drawing.Point(670, 737)
+        Me.TKembali.Location = New System.Drawing.Point(662, 738)
         Me.TKembali.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TKembali.Name = "TKembali"
         Me.TKembali.Size = New System.Drawing.Size(150, 31)
@@ -340,7 +332,7 @@ Partial Class FormTransaksiService
         'TCariBarang
         '
         Me.TCariBarang.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TCariBarang.Location = New System.Drawing.Point(843, 641)
+        Me.TCariBarang.Location = New System.Drawing.Point(835, 642)
         Me.TCariBarang.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TCariBarang.Name = "TCariBarang"
         Me.TCariBarang.Size = New System.Drawing.Size(222, 26)
@@ -349,7 +341,7 @@ Partial Class FormTransaksiService
         'TCariJasa
         '
         Me.TCariJasa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TCariJasa.Location = New System.Drawing.Point(843, 343)
+        Me.TCariJasa.Location = New System.Drawing.Point(835, 344)
         Me.TCariJasa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TCariJasa.Name = "TCariJasa"
         Me.TCariJasa.Size = New System.Drawing.Size(222, 26)
@@ -357,7 +349,7 @@ Partial Class FormTransaksiService
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(201, 644)
+        Me.Button3.Location = New System.Drawing.Point(193, 645)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(84, 62)
@@ -367,7 +359,7 @@ Partial Class FormTransaksiService
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(107, 644)
+        Me.Button2.Location = New System.Drawing.Point(99, 645)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(84, 62)
@@ -377,7 +369,7 @@ Partial Class FormTransaksiService
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 644)
+        Me.Button1.Location = New System.Drawing.Point(7, 645)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(84, 62)
@@ -389,7 +381,7 @@ Partial Class FormTransaksiService
         '
         Me.DGVBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVBarang.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.Nama, Me.DataGridViewTextBoxColumn2, Me.Jumlah, Me.Total})
-        Me.DGVBarang.Location = New System.Drawing.Point(15, 400)
+        Me.DGVBarang.Location = New System.Drawing.Point(7, 401)
         Me.DGVBarang.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DGVBarang.Name = "DGVBarang"
         Me.DGVBarang.RowHeadersWidth = 62
@@ -424,27 +416,35 @@ Partial Class FormTransaksiService
         Me.Jumlah.Name = "Jumlah"
         Me.Jumlah.Width = 50
         '
-        'Label1
+        'DGVJasa
         '
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(13, 6)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(150, 31)
-        Me.Label1.TabIndex = 89
-        Me.Label1.Text = "Nomor"
+        Me.DGVJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVJasa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Kode, Me.Jasa, Me.Harga})
+        Me.DGVJasa.Location = New System.Drawing.Point(5, 95)
+        Me.DGVJasa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DGVJasa.Name = "DGVJasa"
+        Me.DGVJasa.RowHeadersWidth = 62
+        Me.DGVJasa.Size = New System.Drawing.Size(820, 231)
+        Me.DGVJasa.TabIndex = 103
         '
-        'FormTransaksiService
+        'Harga
+        '
+        Me.Harga.HeaderText = "Harga"
+        Me.Harga.MinimumWidth = 8
+        Me.Harga.Name = "Harga"
+        Me.Harga.Width = 150
+        '
+        'FormTransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1282, 776)
+        Me.ClientSize = New System.Drawing.Size(1265, 720)
         Me.Controls.Add(Me.tbarisbarang)
         Me.Controls.Add(Me.tbarisjasa)
         Me.Controls.Add(Me.txtMontir)
         Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.DGVJasa)
         Me.Controls.Add(Me.TKeluhan)
         Me.Controls.Add(Me.TNopol)
         Me.Controls.Add(Me.TTotalharga)
@@ -469,13 +469,13 @@ Partial Class FormTransaksiService
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DGVBarang)
-        Me.Controls.Add(Me.Label1)
-        Me.Name = "FormTransaksiService"
-        Me.Text = "FormTransaksiService"
-        CType(Me.DGVJasa, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Controls.Add(Me.DGVJasa)
+        Me.Name = "FormTransaksi"
+        Me.Text = "FormTransaksi"
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGV1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGVBarang, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVJasa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -485,11 +485,8 @@ Partial Class FormTransaksiService
     Friend WithEvents tbarisjasa As Label
     Friend WithEvents txtMontir As TextBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents DGVJasa As DataGridView
-    Friend WithEvents Kode As DataGridViewTextBoxColumn
-    Friend WithEvents Jasa As DataGridViewTextBoxColumn
-    Friend WithEvents Harga As DataGridViewTextBoxColumn
     Friend WithEvents TKeluhan As TextBox
     Friend WithEvents TNopol As TextBox
     Friend WithEvents TTotalharga As Label
@@ -505,6 +502,8 @@ Partial Class FormTransaksiService
     Friend WithEvents Label2 As Label
     Friend WithEvents Total As DataGridViewTextBoxColumn
     Friend WithEvents Label9 As Label
+    Friend WithEvents Kode As DataGridViewTextBoxColumn
+    Friend WithEvents Jasa As DataGridViewTextBoxColumn
     Friend WithEvents DGV2 As DataGridView
     Friend WithEvents DGV1 As DataGridView
     Friend WithEvents TDibayar As TextBox
@@ -519,5 +518,6 @@ Partial Class FormTransaksiService
     Friend WithEvents Nama As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents Jumlah As DataGridViewTextBoxColumn
-    Friend WithEvents Label1 As Label
+    Friend WithEvents DGVJasa As DataGridView
+    Friend WithEvents Harga As DataGridViewTextBoxColumn
 End Class

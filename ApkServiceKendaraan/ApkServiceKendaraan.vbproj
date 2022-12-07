@@ -6,15 +6,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9DDC886F-A92D-45B7-900F-539F04E7829C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ApkServiceKendaraan.My.MyApplication</StartupObject>
+    <StartupObject>ApkServiceKendaraan.FormMenuUtama</StartupObject>
     <RootNamespace>ApkServiceKendaraan</RootNamespace>
     <AssemblyName>ApkServiceKendaraan</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -64,10 +65,23 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -95,6 +109,12 @@
     <Compile Include="FormBarang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormCetak.Designer.vb">
+      <DependentUpon>FormCetak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCetak.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormHistoriService.Designer.vb">
       <DependentUpon>FormHistoriService.vb</DependentUpon>
     </Compile>
@@ -105,6 +125,18 @@
       <DependentUpon>FormJasa.vb</DependentUpon>
     </Compile>
     <Compile Include="FormJasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanMaster.Designer.vb">
+      <DependentUpon>FormLaporanMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanService.Designer.vb">
+      <DependentUpon>FormLaporanService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanService.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.vb">
@@ -120,10 +152,10 @@
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTransaksiService.Designer.vb">
-      <DependentUpon>FormTransaksiService.vb</DependentUpon>
+    <Compile Include="FormTransaksi.Designer.vb">
+      <DependentUpon>FormTransaksi.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormTransaksiService.vb">
+    <Compile Include="FormTransaksi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUser.Designer.vb">
@@ -160,11 +192,20 @@
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCetak.resx">
+      <DependentUpon>FormCetak.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHistoriService.resx">
       <DependentUpon>FormHistoriService.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormJasa.resx">
       <DependentUpon>FormJasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanMaster.resx">
+      <DependentUpon>FormLaporanMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanService.resx">
+      <DependentUpon>FormLaporanService.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
@@ -172,8 +213,8 @@
     <EmbeddedResource Include="FormMenuUtama.resx">
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTransaksiService.resx">
-      <DependentUpon>FormTransaksiService.vb</DependentUpon>
+    <EmbeddedResource Include="FormTransaksi.resx">
+      <DependentUpon>FormTransaksi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUser.resx">
       <DependentUpon>FormUser.vb</DependentUpon>
@@ -198,7 +239,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -217,6 +257,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\70827-gearloading1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

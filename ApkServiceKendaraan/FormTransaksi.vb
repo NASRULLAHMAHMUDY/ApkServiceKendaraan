@@ -1,6 +1,7 @@
 ﻿Imports System.Data.Odbc
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
 
-Public Class FormTransaksiService
+Public Class FormTransaksi
 
     Dim jumlahbarisjasa As Integer
     Dim jumlahbarisbarang As Integer
@@ -22,13 +23,13 @@ Public Class FormTransaksiService
     End Sub
 
     Sub Otomatis()
-        cmd = New OdbcCommand("select Nomor from service order by nomor desc", conn)
-        rd = cmd.ExecuteReader
-        rd.Read()
-        If Not rd.HasRows Then
+        cmd = New OdbcCommand("select nomor from service order by nomor desc", conn)
+        DR = cmd.ExecuteReader
+        DR.Read()
+        If Not DR.HasRows Then
             TNomor.Text = "00001"
         Else
-            TNomor.Text = Format(Microsoft.VisualBasic.Right(rd.Item("nomor"), 5) + 1, "00000")
+            TNomor.Text = Format(Microsoft.VisualBasic.Right(DR.Item("nomor"), 5) + 1, "00000")
         End If
     End Sub
 
@@ -90,7 +91,7 @@ Public Class FormTransaksiService
     End Sub
 
     Private Sub TCariJasa_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TCariJasa.TextChanged
-        da = New OdbcDataAdapter("select * from jasa where Nama_Jasa like '%" & TCariJasa.Text & "%'", conn)
+        da = New OdbcDataAdapter("select * from jasa where nama_jasa like '%" & TCariJasa.Text & "%'", conn)
         ds = New DataSet
         da.Fill(ds)
         DGV1.DataSource = ds.Tables(0)
@@ -98,7 +99,7 @@ Public Class FormTransaksiService
     End Sub
 
     Private Sub TCariBarang_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TCariBarang.TextChanged
-        da = New OdbcDataAdapter("select * from barang where Nama_Barang like '%" & TCariBarang.Text & "%'", conn)
+        da = New OdbcDataAdapter("select * from barang where nama_barang like '%" & TCariBarang.Text & "%'", conn)
         ds = New DataSet
         da.Fill(ds)
         DGV2.DataSource = ds.Tables(0)
@@ -131,8 +132,8 @@ Public Class FormTransaksiService
             Exit Sub
         End If
 
-        cmd = New OdbcCommand("insert into service values ('" & TNomor.Text & "','" & Format(DateValue(TTanggal.Text), "yyyy-MM-dd") & "','" & TNopol.Text & "','" & TKeluhan.Text & "','" & TTLBiayaService.Text & "','" & TTLBiayaBarang.Text & "','" & TTotalharga.Text & "','" & TDibayar.Text & "','" & TKembali.Text & "','" & FormMenuUtama.Panel1.Text & "','" & txtMontir.Text & "')", conn)
-        cmd.ExecuteNonQuery()
+        CMD = New OdbcCommand("insert into service values ('" & TNomor.Text & "','" & Format(DateValue(TTanggal.Text), "yyyy-MM-dd") & "','" & TNopol.Text & "','" & TKeluhan.Text & "','" & TTLBiayaService.Text & "','" & TTLBiayaBarang.Text & "','" & TTotalharga.Text & "','" & TDibayar.Text & "','" & TKembali.Text & "','" & FormMenuUtama.Panel1.Text & "','" & txtMontir.Text & "')", CONN)
+        CMD.ExecuteNonQuery()
 
         'jika baris jasa lebih banyak
         If Val(tbarisjasa.Text) > Val(tbarisbarang.Text) Then
@@ -142,14 +143,14 @@ Public Class FormTransaksiService
             Next
 
             For baris As Integer = 0 To DGVBarang.RowCount - 2
-                cmd = New OdbcCommand("update detail set Kode_Barang='" & DGVBarang.Rows(baris).Cells(0).Value & "',Harga='" & DGVBarang.Rows(baris).Cells(2).Value & "',Jumlah='" & DGVBarang.Rows(baris).Cells(3).Value & "',Total='" & DGVBarang.Rows(baris).Cells(4).Value & "' where Nomor='" & TNomor.Text & "' and Kode_Jasa='" & DGVJasa.Rows(baris).Cells(0).Value & "'", conn)
+                cmd = New OdbcCommand("update detail set kode_barang='" & DGVBarang.Rows(baris).Cells(0).Value & "',Harga='" & DGVBarang.Rows(baris).Cells(2).Value & "',Jumlah='" & DGVBarang.Rows(baris).Cells(3).Value & "',Total='" & DGVBarang.Rows(baris).Cells(4).Value & "' where nomor='" & TNomor.Text & "' and kode_jasa='" & DGVJasa.Rows(baris).Cells(0).Value & "'", conn)
                 cmd.ExecuteNonQuery()
 
-                cmd = New OdbcCommand("select Stok from barang where Kode_Barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
-                rd = cmd.ExecuteReader
-                rd.Read()
-                If rd.HasRows Then
-                    cmd = New OdbcCommand("update barang set Stok='" & rd.Item("Stok") - DGVBarang.Rows(baris).Cells(3).Value & "' where Kode_Barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
+                cmd = New OdbcCommand("select stok from barang where kode_barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
+                DR = cmd.ExecuteReader
+                DR.Read()
+                If DR.HasRows Then
+                    cmd = New OdbcCommand("update barang set stok='" & DR.Item("stok") - DGVBarang.Rows(baris).Cells(3).Value & "' where kode_barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
                     cmd.ExecuteNonQuery()
                 End If
             Next
@@ -161,17 +162,17 @@ Public Class FormTransaksiService
                 cmd = New OdbcCommand("insert into detail values('" & TNomor.Text & "','" & DGVBarang.Rows(baris).Cells(0).Value & "','" & DGVBarang.Rows(baris).Cells(2).Value & "','" & DGVBarang.Rows(baris).Cells(3).Value & "','" & DGVBarang.Rows(baris).Cells(4).Value & "','-',0)", conn)
                 cmd.ExecuteNonQuery()
 
-                cmd = New OdbcCommand("select Stok from barang where Kode_Barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
-                rd = cmd.ExecuteReader
-                rd.Read()
-                If rd.HasRows Then
-                    cmd = New OdbcCommand("update barang set Stok='" & rd.Item("Stok") - DGVBarang.Rows(baris).Cells(3).Value & "' where Kode_Barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
+                cmd = New OdbcCommand("select stok from barang where kode_barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
+                DR = cmd.ExecuteReader
+                DR.Read()
+                If DR.HasRows Then
+                    cmd = New OdbcCommand("update barang set stok='" & DR.Item("stok") - DGVBarang.Rows(baris).Cells(3).Value & "' where kode_barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
                     cmd.ExecuteNonQuery()
                 End If
             Next
 
             For baris As Integer = 0 To DGVJasa.RowCount - 2
-                cmd = New OdbcCommand("update detail set Kode_Jasa='" & DGVJasa.Rows(baris).Cells(0).Value & "',tarif='" & DGVJasa.Rows(baris).Cells(2).Value & "' where nomor='" & TNomor.Text & "' and kode_barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
+                cmd = New OdbcCommand("update detail set kode_jasa='" & DGVJasa.Rows(baris).Cells(0).Value & "',tarif='" & DGVJasa.Rows(baris).Cells(2).Value & "' where nomor='" & TNomor.Text & "' and kode_barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
                 cmd.ExecuteNonQuery()
             Next
         End If
@@ -179,14 +180,14 @@ Public Class FormTransaksiService
         'jika baris jasa dan barang sama
 
 
-        'If MessageBox.Show("cetak faktur...", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-        '    Cetak.Show()
-        '    'laporan.Load("pembayaran.rpt")
-        '    laporan.Load("faktur ok.rpt")
-        '    Call SetingLaporan()
-        '    Cetak.CRV.ReportSource = laporan
-        '    Cetak.CRV.RefreshReport()
-        'End If
+        If MessageBox.Show("cetak faktur...", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            FormCetak.Show()
+            'laporan.Load("pembayaran.rpt")
+            laporan.Load("faktur ok.rpt")
+            Call SetingLaporan()
+            FormCetak.CRV.ReportSource = laporan
+            FormCetak.CRV.RefreshReport()
+        End If
         Call Otomatis()
         Call Bersihkan()
         Call tampilBarang()
@@ -249,12 +250,12 @@ Public Class FormTransaksiService
             Next
         Next
 
-        cmd = New OdbcCommand("select * from jasa where Kode_Jasa='" & DGVJasa.Rows(baris).Cells(0).Value & "'", conn)
-        rd = cmd.ExecuteReader
-        rd.Read()
-        If rd.HasRows Then
-            DGVJasa.Rows(baris).Cells(1).Value = rd.Item("Nama_Jasa")
-            DGVJasa.Rows(baris).Cells(2).Value = rd.Item("Harga_Jasa")
+        cmd = New OdbcCommand("select * from jasa where kode_jasa='" & DGVJasa.Rows(baris).Cells(0).Value & "'", conn)
+        DR = cmd.ExecuteReader
+        DR.Read()
+        If DR.HasRows Then
+            DGVJasa.Rows(baris).Cells(1).Value = DR.Item("nama_jasa")
+            DGVJasa.Rows(baris).Cells(2).Value = DR.Item("harga_jasa")
             DGVJasa.Columns(2).DefaultCellStyle.Format = "###,###,###"
             DGVJasa.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         End If
@@ -278,12 +279,12 @@ Public Class FormTransaksiService
             Next
         Next
 
-        cmd = New OdbcCommand("select * from barang where Kode_Barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
-        rd = cmd.ExecuteReader
-        rd.Read()
-        If rd.HasRows Then
-            DGVBarang.Rows(baris).Cells(1).Value = rd.Item("Nama_Barang")
-            DGVBarang.Rows(baris).Cells(2).Value = rd.Item("Harga_Barang")
+        cmd = New OdbcCommand("select * from Barang where kode_Barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", conn)
+        DR = cmd.ExecuteReader
+        DR.Read()
+        If DR.HasRows Then
+            DGVBarang.Rows(baris).Cells(1).Value = DR.Item("nama_Barang")
+            DGVBarang.Rows(baris).Cells(2).Value = DR.Item("harga_Barang")
             DGVBarang.Columns(2).DefaultCellStyle.Format = "###,###,###"
             DGVBarang.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
             DGVBarang.Rows(baris).Cells(3).Value = 1

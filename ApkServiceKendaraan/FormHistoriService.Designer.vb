@@ -52,7 +52,7 @@ Partial Class FormHistoriService
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(172, 13)
+        Me.ComboBox1.Location = New System.Drawing.Point(171, 11)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(148, 28)
@@ -61,7 +61,7 @@ Partial Class FormHistoriService
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(13, 15)
+        Me.Label1.Location = New System.Drawing.Point(12, 13)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(150, 31)
@@ -71,7 +71,7 @@ Partial Class FormHistoriService
         'Label10
         '
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label10.Location = New System.Drawing.Point(499, 629)
+        Me.Label10.Location = New System.Drawing.Point(498, 627)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(160, 31)
@@ -82,7 +82,7 @@ Partial Class FormHistoriService
         'DGVJasa
         '
         Me.DGVJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVJasa.Location = New System.Drawing.Point(13, 103)
+        Me.DGVJasa.Location = New System.Drawing.Point(12, 101)
         Me.DGVJasa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DGVJasa.Name = "DGVJasa"
         Me.DGVJasa.RowHeadersWidth = 62
@@ -92,7 +92,7 @@ Partial Class FormHistoriService
         'TKeluhan
         '
         Me.TKeluhan.Enabled = False
-        Me.TKeluhan.Location = New System.Drawing.Point(490, 46)
+        Me.TKeluhan.Location = New System.Drawing.Point(489, 44)
         Me.TKeluhan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TKeluhan.Name = "TKeluhan"
         Me.TKeluhan.Size = New System.Drawing.Size(343, 26)
@@ -101,7 +101,7 @@ Partial Class FormHistoriService
         'TNopol
         '
         Me.TNopol.Enabled = False
-        Me.TNopol.Location = New System.Drawing.Point(490, 15)
+        Me.TNopol.Location = New System.Drawing.Point(489, 13)
         Me.TNopol.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TNopol.Name = "TNopol"
         Me.TNopol.Size = New System.Drawing.Size(148, 26)
@@ -110,7 +110,7 @@ Partial Class FormHistoriService
         'TTotalharga
         '
         Me.TTotalharga.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TTotalharga.Location = New System.Drawing.Point(669, 598)
+        Me.TTotalharga.Location = New System.Drawing.Point(668, 596)
         Me.TTotalharga.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TTotalharga.Name = "TTotalharga"
         Me.TTotalharga.Size = New System.Drawing.Size(150, 31)
@@ -121,7 +121,7 @@ Partial Class FormHistoriService
         'TBiayaBarang
         '
         Me.TBiayaBarang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TBiayaBarang.Location = New System.Drawing.Point(669, 567)
+        Me.TBiayaBarang.Location = New System.Drawing.Point(668, 565)
         Me.TBiayaBarang.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TBiayaBarang.Name = "TBiayaBarang"
         Me.TBiayaBarang.Size = New System.Drawing.Size(150, 31)
@@ -132,7 +132,7 @@ Partial Class FormHistoriService
         'TTanggal
         '
         Me.TTanggal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TTanggal.Location = New System.Drawing.Point(172, 49)
+        Me.TTanggal.Location = New System.Drawing.Point(171, 47)
         Me.TTanggal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TTanggal.Name = "TTanggal"
         Me.TTanggal.Size = New System.Drawing.Size(150, 31)
@@ -142,7 +142,7 @@ Partial Class FormHistoriService
         'TBiayaService
         '
         Me.TBiayaService.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TBiayaService.Location = New System.Drawing.Point(670, 287)
+        Me.TBiayaService.Location = New System.Drawing.Point(669, 285)
         Me.TBiayaService.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TBiayaService.Name = "TBiayaService"
         Me.TBiayaService.Size = New System.Drawing.Size(150, 31)
@@ -153,7 +153,7 @@ Partial Class FormHistoriService
         'Label7
         '
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label7.Location = New System.Drawing.Point(499, 598)
+        Me.Label7.Location = New System.Drawing.Point(498, 596)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(160, 31)
@@ -163,7 +163,7 @@ Partial Class FormHistoriService
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(499, 567)
+        Me.Label6.Location = New System.Drawing.Point(498, 565)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(160, 31)
@@ -173,7 +173,7 @@ Partial Class FormHistoriService
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label5.Location = New System.Drawing.Point(511, 287)
+        Me.Label5.Location = New System.Drawing.Point(510, 285)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(150, 31)
@@ -183,7 +183,7 @@ Partial Class FormHistoriService
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(331, 46)
+        Me.Label4.Location = New System.Drawing.Point(330, 44)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(150, 31)
@@ -193,7 +193,7 @@ Partial Class FormHistoriService
         'Label3
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label3.Location = New System.Drawing.Point(331, 15)
+        Me.Label3.Location = New System.Drawing.Point(330, 13)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(150, 31)
@@ -203,7 +203,7 @@ Partial Class FormHistoriService
         'TDibayar
         '
         Me.TDibayar.Enabled = False
-        Me.TDibayar.Location = New System.Drawing.Point(669, 629)
+        Me.TDibayar.Location = New System.Drawing.Point(668, 627)
         Me.TDibayar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TDibayar.Name = "TDibayar"
         Me.TDibayar.Size = New System.Drawing.Size(148, 26)
@@ -213,7 +213,7 @@ Partial Class FormHistoriService
         'TKembali
         '
         Me.TKembali.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TKembali.Location = New System.Drawing.Point(669, 659)
+        Me.TKembali.Location = New System.Drawing.Point(668, 657)
         Me.TKembali.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TKembali.Name = "TKembali"
         Me.TKembali.Size = New System.Drawing.Size(150, 31)
@@ -224,7 +224,7 @@ Partial Class FormHistoriService
         'Label9
         '
         Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label9.Location = New System.Drawing.Point(499, 659)
+        Me.Label9.Location = New System.Drawing.Point(498, 657)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(160, 31)
@@ -233,7 +233,7 @@ Partial Class FormHistoriService
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(256, 563)
+        Me.Button3.Location = New System.Drawing.Point(255, 561)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(112, 62)
@@ -243,7 +243,7 @@ Partial Class FormHistoriService
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(135, 563)
+        Me.Button2.Location = New System.Drawing.Point(134, 561)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(112, 62)
@@ -253,7 +253,7 @@ Partial Class FormHistoriService
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(13, 563)
+        Me.Button1.Location = New System.Drawing.Point(12, 561)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 62)
@@ -264,7 +264,7 @@ Partial Class FormHistoriService
         'DGVBarang
         '
         Me.DGVBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVBarang.Location = New System.Drawing.Point(13, 323)
+        Me.DGVBarang.Location = New System.Drawing.Point(12, 321)
         Me.DGVBarang.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DGVBarang.Name = "DGVBarang"
         Me.DGVBarang.RowHeadersWidth = 62
@@ -274,7 +274,7 @@ Partial Class FormHistoriService
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(13, 49)
+        Me.Label2.Location = New System.Drawing.Point(12, 47)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(150, 31)

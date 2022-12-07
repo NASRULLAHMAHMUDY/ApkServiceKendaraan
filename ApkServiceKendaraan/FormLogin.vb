@@ -26,9 +26,9 @@ Public Class FormLogin
             'Menggambill data user dari database
             Call koneksi()
             cmd = New OdbcCommand("select * from users where Kode_User='" & txtNama.Text & "' and Pwd_User='" & TxtPassword.Text & "'", conn)
-            rd = cmd.ExecuteReader
-            rd.Read()
-            If rd.HasRows Then
+            DR = CMD.ExecuteReader
+            DR.Read()
+            If DR.HasRows Then
                 Me.Hide()
                 FormMenuUtama.ShowDialog()
                 Me.Close()
