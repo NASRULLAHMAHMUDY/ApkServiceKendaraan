@@ -6,11 +6,11 @@
         If (progress = 100) Then
             Timer1.Stop()
             Me.Hide()
-            FormLogin.ShowDialog()
-            Me.Close()
+            'FormLogin.ShowDialog()
+            'Me.Close()
 
             FormMenuUtama.ShowDialog()
-            Me.Close()
+            'Me.Close()
         End If
         Pb_Progress.Value = newprogress
         lbl_Loading.Text = "Loading... " & newprogress & "%"

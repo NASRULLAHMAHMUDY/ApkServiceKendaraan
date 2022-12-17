@@ -3,73 +3,91 @@ Imports Microsoft.VisualBasic.ApplicationServices
 
 Public Class FormMenuUtama
 
-    Private Sub MenuUtama_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
-        If e.KeyChar = Chr(27) Then
-            If MessageBox.Show("Tutup aplikasi...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                End
-            End If
-        End If
+    Sub Kunci()
+        Btn_User.Enabled = False
+        Btn_Barang.Enabled = False
+        Btn_Jasa.Enabled = False
+        Btn_service.Enabled = False
+        Btn_Master.Enabled = False
+        Btn_Service_Lp.Enabled = False
+        Btn_Histori.Enabled = False
+        Btn_LogOff.Enabled = False
     End Sub
 
     Private Sub MenuUtama_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        On Error Resume Next
-        Call Koneksi()
-        PictureBox1.Load("wall2.jpg")
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        Slabel8.Text = Today
+        Call Kunci()
+
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        FormUser.Show()
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_User.Click
+        FormAdmin.ShowDialog()
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Barang.Click
         FormBarang.Show()
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Jasa.Click
         FormJasa.Show()
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_service.Click
         FormTransaksi.Show()
     End Sub
 
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
-        FormLaporanMaster.Show()
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Master.Click
+        ' FormLaporanMaster.Show()
     End Sub
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
-        FormLaporanService.Show()
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Service_Lp.Click
+        ' FormLaporanService.Show()
     End Sub
 
-    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button18.Click
+    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Histori.Click
         FormHistoriService.Show()
     End Sub
 
-    Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
+    Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_LogOff.Click
         Me.Close()
         FormLogin.Show()
-        FormLogin.txtNama.Clear()
+        FormLogin.TxtNama.Clear()
         FormLogin.TxtPassword.Clear()
-        FormLogin.txtNama.Focus()
+        FormLogin.TxtNama.Focus()
     End Sub
 
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
-        If MessageBox.Show("Tutup aplikasi...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            End
-        End If
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Exit.Click
+        'If MessageBox.Show("Tutup aplikasi...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+        '    End
+        'End If
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        Call Koneksi()
-        CMD = New OdbcCommand("delete  from service", CONN)
-        CMD.ExecuteNonQuery()
+        'Call Koneksi()
+        'CMD = New OdbcCommand("delete  from service", CONN)
+        'CMD.ExecuteNonQuery()
 
-        CMD = New OdbcCommand("delete  from DETAIL", CONN)
-        CMD.ExecuteNonQuery()
+        'CMD = New OdbcCommand("delete  from DETAIL", CONN)
+        'CMD.ExecuteNonQuery()
 
-        MsgBox("data transaksi berhasil dihapus")
+        'MsgBox("data transaksi berhasil dihapus")
 
+    End Sub
+
+    Private Sub BtnMekanik_Click(sender As Object, e As EventArgs) Handles BtnMekanik.Click
+        FormMekanik.Show()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Slabel10.Text = TimeOfDay
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        FormLogin.ShowDialog()
     End Sub
 End Class

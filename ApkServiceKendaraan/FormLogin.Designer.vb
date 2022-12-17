@@ -25,7 +25,7 @@ Partial Class FormLogin
         Me.Cancel = New System.Windows.Forms.Button()
         Me.OK = New System.Windows.Forms.Button()
         Me.TxtPassword = New System.Windows.Forms.TextBox()
-        Me.txtNama = New System.Windows.Forms.TextBox()
+        Me.TxtNama = New System.Windows.Forms.TextBox()
         Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.UsernameLabel = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -61,14 +61,14 @@ Partial Class FormLogin
         Me.TxtPassword.Size = New System.Drawing.Size(328, 32)
         Me.TxtPassword.TabIndex = 10
         '
-        'txtNama
+        'TxtNama
         '
-        Me.txtNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNama.Location = New System.Drawing.Point(152, 14)
-        Me.txtNama.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtNama.Name = "txtNama"
-        Me.txtNama.Size = New System.Drawing.Size(328, 32)
-        Me.txtNama.TabIndex = 8
+        Me.TxtNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNama.Location = New System.Drawing.Point(152, 14)
+        Me.TxtNama.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TxtNama.Name = "TxtNama"
+        Me.TxtNama.Size = New System.Drawing.Size(328, 32)
+        Me.TxtNama.TabIndex = 8
         '
         'PasswordLabel
         '
@@ -112,7 +112,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.OK)
         Me.Controls.Add(Me.TxtPassword)
-        Me.Controls.Add(Me.txtNama)
+        Me.Controls.Add(Me.TxtNama)
         Me.Controls.Add(Me.PasswordLabel)
         Me.Controls.Add(Me.UsernameLabel)
         Me.Name = "FormLogin"
@@ -126,7 +126,7 @@ Partial Class FormLogin
     Friend WithEvents Cancel As Button
     Friend WithEvents OK As Button
     Friend WithEvents TxtPassword As TextBox
-    Friend WithEvents txtNama As TextBox
+    Friend WithEvents TxtNama As TextBox
     Friend WithEvents PasswordLabel As Label
     Friend WithEvents UsernameLabel As Label
     Friend WithEvents CheckBox1 As CheckBox

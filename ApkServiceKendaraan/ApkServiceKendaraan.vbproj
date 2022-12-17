@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9DDC886F-A92D-45B7-900F-539F04E7829C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ApkServiceKendaraan.FormMenuUtama</StartupObject>
+    <StartupObject>ApkServiceKendaraan.SplashScreen</StartupObject>
     <RootNamespace>ApkServiceKendaraan</RootNamespace>
     <AssemblyName>ApkServiceKendaraan</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -103,6 +103,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRV.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormBarang.Designer.vb">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </Compile>
@@ -127,22 +133,16 @@
     <Compile Include="FormJasa.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLaporanMaster.Designer.vb">
-      <DependentUpon>FormLaporanMaster.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormLaporanMaster.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLaporanService.Designer.vb">
-      <DependentUpon>FormLaporanService.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormLaporanService.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormLogin.Designer.vb">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMekanik.Designer.vb">
+      <DependentUpon>FormMekanik.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMekanik.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenuUtama.vb">
@@ -158,10 +158,10 @@
     <Compile Include="FormTransaksi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUser.Designer.vb">
-      <DependentUpon>FormUser.vb</DependentUpon>
+    <Compile Include="FormAdmin.Designer.vb">
+      <DependentUpon>FormAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormUser.vb">
+    <Compile Include="FormAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
@@ -189,6 +189,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CRV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRV.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </EmbeddedResource>
@@ -201,14 +205,11 @@
     <EmbeddedResource Include="FormJasa.resx">
       <DependentUpon>FormJasa.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLaporanMaster.resx">
-      <DependentUpon>FormLaporanMaster.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLaporanService.resx">
-      <DependentUpon>FormLaporanService.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMekanik.resx">
+      <DependentUpon>FormMekanik.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuUtama.resx">
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
@@ -216,8 +217,8 @@
     <EmbeddedResource Include="FormTransaksi.resx">
       <DependentUpon>FormTransaksi.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUser.resx">
-      <DependentUpon>FormUser.vb</DependentUpon>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

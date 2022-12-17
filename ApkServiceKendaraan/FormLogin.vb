@@ -1,41 +1,42 @@
 ﻿Imports System.Data.Odbc
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
 Public Class FormLogin
     Sub Bersih()
-        txtNama.Text = ""
+        TxtNama.Text = ""
         TxtPassword.Text = ""
     End Sub
-    Private Sub txtnama_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNama.KeyPress
-        If e.KeyChar = Chr(13) Then
-            TxtPassword.Focus()
-        End If
-    End Sub
 
-    Private Sub txtpassword_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TxtPassword.KeyPress
-        If e.KeyChar = Chr(13) Then
-            OK.Focus()
-        End If
+    Sub Buka()
+        FormMenuUtama.Btn_User.Enabled = True
+        FormMenuUtama.Btn_Barang.Enabled = True
+        FormMenuUtama.Btn_Jasa.Enabled = True
+        FormMenuUtama.Btn_service.Enabled = True
+        FormMenuUtama.Btn_Master.Enabled = True
+        FormMenuUtama.Btn_Service_Lp.Enabled = True
+        FormMenuUtama.Btn_Histori.Enabled = True
+        FormMenuUtama.Btn_LogOff.Enabled = True
     End Sub
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         'Username(Kode_User) dan password (Pwd_user)tidak boleh kosong
-        If txtNama.Text = "" Or TxtPassword.Text = "" Then
+        If TxtNama.Text = "" Or TxtPassword.Text = "" Then
             MsgBox("Kode admin dan password tidak boleh kosong!", MsgBoxStyle.Exclamation, "Isi Username dan Password")
         Else
             'Menggambill data user dari database
-            Call koneksi()
-            cmd = New OdbcCommand("select * from users where Kode_User='" & txtNama.Text & "' and Pwd_User='" & TxtPassword.Text & "'", conn)
+            Call Koneksi()
+            CMD = New OdbcCommand("select * from admin where Kode_Admin='" & TxtNama.Text & "' and Pwd_Admin='" & TxtPassword.Text & "'", CONN)
             DR = CMD.ExecuteReader
             DR.Read()
             If DR.HasRows Then
-                Me.Hide()
-                FormMenuUtama.ShowDialog()
                 Me.Close()
+                Call Buka()
+                FormMenuUtama.Show()
+                FormMenuUtama.Slabel2.Text = DR!Kode_Admin
+                FormMenuUtama.Slabel4.Text = DR!Nama_Admin
+                FormMenuUtama.Slabel6.Text = DR!Status_Admin
             Else
                 MsgBox("Kode Admin dan Password salah!", MsgBoxStyle.Critical, "Cek Username dan Password")
                 Call Bersih()
-                txtNama.Focus()
+                TxtNama.Focus()
             End If
 
         End If
@@ -46,8 +47,8 @@ Public Class FormLogin
     End Sub
 
     Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Call koneksi()
-        txtNama.Focus()
+        Call Koneksi()
+        TxtNama.Focus()
         TxtPassword.UseSystemPasswordChar = True
     End Sub
 
@@ -60,4 +61,18 @@ Public Class FormLogin
         End If
         TxtPassword.Focus()
     End Sub
+
+    Private Sub TxtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPassword.KeyPress
+        If e.KeyChar = Chr(13) Then
+            OK.Focus()
+        End If
+    End Sub
+
+    Private Sub TxtNama_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNama.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TxtPassword.Focus()
+        End If
+    End Sub
+
+
 End Class

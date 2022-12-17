@@ -61,6 +61,8 @@ Partial Class FormTransaksi
         Me.Jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DGVJasa = New System.Windows.Forms.DataGridView()
         Me.Harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TNamaAdmin = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGV1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVBarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -434,11 +436,27 @@ Partial Class FormTransaksi
         Me.Harga.Name = "Harga"
         Me.Harga.Width = 150
         '
+        'TNamaAdmin
+        '
+        Me.TNamaAdmin.Location = New System.Drawing.Point(772, 5)
+        Me.TNamaAdmin.Name = "TNamaAdmin"
+        Me.TNamaAdmin.Size = New System.Drawing.Size(149, 26)
+        Me.TNamaAdmin.TabIndex = 120
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(909, 736)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(149, 26)
+        Me.TextBox2.TabIndex = 121
+        '
         'FormTransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1265, 720)
+        Me.ClientSize = New System.Drawing.Size(1289, 792)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TNamaAdmin)
         Me.Controls.Add(Me.tbarisbarang)
         Me.Controls.Add(Me.tbarisjasa)
         Me.Controls.Add(Me.txtMontir)
@@ -471,7 +489,9 @@ Partial Class FormTransaksi
         Me.Controls.Add(Me.DGVBarang)
         Me.Controls.Add(Me.DGVJasa)
         Me.Name = "FormTransaksi"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormTransaksi"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGV1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGVBarang, System.ComponentModel.ISupportInitialize).EndInit()
@@ -520,4 +540,6 @@ Partial Class FormTransaksi
     Friend WithEvents Jumlah As DataGridViewTextBoxColumn
     Friend WithEvents DGVJasa As DataGridView
     Friend WithEvents Harga As DataGridViewTextBoxColumn
+    Friend WithEvents TNamaAdmin As TextBox
+    Friend WithEvents TextBox2 As TextBox
 End Class

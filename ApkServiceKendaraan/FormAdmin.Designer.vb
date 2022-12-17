@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FormUser
+Partial Class FormAdmin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class FormUser
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormUser))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAdmin))
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -102,7 +102,7 @@ Partial Class FormUser
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(150, 31)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Kode User"
+        Me.Label1.Text = "Kode Admin"
         '
         'Button4
         '
@@ -160,7 +160,7 @@ Partial Class FormUser
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(150, 31)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Nama User"
+        Me.Label2.Text = "Nama Admin"
         '
         'GroupBox3
         '
@@ -257,7 +257,7 @@ Partial Class FormUser
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         '
-        'FormUser
+        'FormAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -265,9 +265,9 @@ Partial Class FormUser
         Me.Controls.Add(Me.DGV)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "FormUser"
+        Me.Name = "FormAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormUser"
+        Me.Text = "FormAdmin"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()

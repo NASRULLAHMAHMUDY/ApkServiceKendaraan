@@ -88,12 +88,5 @@ Public Class FormHistoriService
         End If
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        FormCetak.Show()
-        FormCetak.CRV.SelectionFormula = "{service.NOMOR} = '" & ComboBox1.Text & "'"
-        laporan.Load("faktur ok.rpt")
-        Call SetingLaporan()
-        FormCetak.CRV.ReportSource = laporan
-        FormCetak.CRV.RefreshReport()
-    End Sub
+
 End Class
