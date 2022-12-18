@@ -302,7 +302,7 @@ Public Class FormTransaksi
         TCariBarang.Clear()
     End Sub
 
-    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TNamaAdmin.KeyPress
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) 
         If e.KeyChar = Chr(13) Then
             If Val(Microsoft.VisualBasic.Str(TNamaAdmin.Text)) < Val(Microsoft.VisualBasic.Str(TTotalharga.Text)) Then
                 MsgBox("Pembayaran kurang")

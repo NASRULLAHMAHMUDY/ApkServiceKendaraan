@@ -25,27 +25,19 @@ Public Class FormMenuUtama
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Barang.Click
-        FormBarang.Show()
+        FormBarang.ShowDialog()
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Jasa.Click
-        FormJasa.Show()
+        FormJasa.ShowDialog()
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_service.Click
-        FormTransaksi.Show()
-    End Sub
-
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Master.Click
-        ' FormLaporanMaster.Show()
-    End Sub
-
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Service_Lp.Click
-        ' FormLaporanService.Show()
+        FormTransaksi.ShowDialog()
     End Sub
 
     Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Histori.Click
-        FormHistoriService.Show()
+        FormHistoriService.ShowDialog()
     End Sub
 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_LogOff.Click
@@ -73,10 +65,6 @@ Public Class FormMenuUtama
 
         'MsgBox("data transaksi berhasil dihapus")
 
-    End Sub
-
-    Private Sub BtnMekanik_Click(sender As Object, e As EventArgs) Handles BtnMekanik.Click
-        FormMekanik.Show()
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click

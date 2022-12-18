@@ -139,12 +139,6 @@
     <Compile Include="FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMekanik.Designer.vb">
-      <DependentUpon>FormMekanik.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMekanik.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormMenuUtama.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -207,9 +201,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMekanik.resx">
-      <DependentUpon>FormMekanik.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuUtama.resx">
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
