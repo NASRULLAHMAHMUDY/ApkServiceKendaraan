@@ -61,6 +61,8 @@ Partial Class FormTransaksi
         Me.Jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DGVJasa = New System.Windows.Forms.DataGridView()
         Me.Harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGV1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVBarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -332,7 +334,7 @@ Partial Class FormTransaksi
         'TCariBarang
         '
         Me.TCariBarang.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TCariBarang.Location = New System.Drawing.Point(835, 642)
+        Me.TCariBarang.Location = New System.Drawing.Point(999, 640)
         Me.TCariBarang.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TCariBarang.Name = "TCariBarang"
         Me.TCariBarang.Size = New System.Drawing.Size(222, 26)
@@ -341,7 +343,7 @@ Partial Class FormTransaksi
         'TCariJasa
         '
         Me.TCariJasa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TCariJasa.Location = New System.Drawing.Point(835, 344)
+        Me.TCariJasa.Location = New System.Drawing.Point(961, 342)
         Me.TCariJasa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TCariJasa.Name = "TCariJasa"
         Me.TCariJasa.Size = New System.Drawing.Size(222, 26)
@@ -434,11 +436,31 @@ Partial Class FormTransaksi
         Me.Harga.Name = "Harga"
         Me.Harga.Width = 150
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(872, 344)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(70, 20)
+        Me.Label11.TabIndex = 120
+        Me.Label11.Text = "Cari jasa"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(872, 650)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(93, 20)
+        Me.Label12.TabIndex = 121
+        Me.Label12.Text = "Cari Barang"
+        '
         'FormTransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1289, 792)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.tbarisbarang)
         Me.Controls.Add(Me.tbarisjasa)
         Me.Controls.Add(Me.txtMontir)
@@ -522,4 +544,6 @@ Partial Class FormTransaksi
     Friend WithEvents Jumlah As DataGridViewTextBoxColumn
     Friend WithEvents DGVJasa As DataGridView
     Friend WithEvents Harga As DataGridViewTextBoxColumn
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
 End Class

@@ -1,13 +1,14 @@
 ﻿Imports System.Data.Odbc
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.[Shared]
 
 Public Class FormTransaksi
 
-    Dim jumlahbarisjasa As Integer
-    Dim jumlahbarisbarang As Integer
+    'Dim jumlahbarisjasa As Integer
+    'Dim jumlahbarisbarang As Integer
 
     Sub Bersihkan()
-        TNopol.Clear()
+        'TNopol.Clear()
         TKeluhan.Text = "-"
         TTLBiayaBarang.Text = 0
         TTLBiayaService.Text = 0
@@ -24,8 +25,8 @@ Public Class FormTransaksi
     End Sub
 
     Sub Otomatis()
-        cmd = New OdbcCommand("select nomor from service order by nomor desc", conn)
-        DR = cmd.ExecuteReader
+        CMD = New OdbcCommand("select nomor from service order by nomor desc", CONN)
+        DR = CMD.ExecuteReader
         DR.Read()
         If Not DR.HasRows Then
             TNomor.Text = "00001"
@@ -35,23 +36,23 @@ Public Class FormTransaksi
     End Sub
 
     Sub tampilJasa()
-        da = New OdbcDataAdapter("select * from jasa", conn)
-        ds = New DataSet
-        da.Fill(ds)
-        DGV1.DataSource = ds.Tables(0)
+        DA = New OdbcDataAdapter("select * from jasa", CONN)
+        DS = New DataSet
+        DA.Fill(DS)
+        DGV1.DataSource = DS.Tables(0)
         DGV1.ReadOnly = True
     End Sub
 
     Sub tampilBarang()
-        da = New OdbcDataAdapter("select * from barang where stok>0", conn)
-        ds = New DataSet
-        da.Fill(ds)
-        DGV2.DataSource = ds.Tables(0)
+        DA = New OdbcDataAdapter("select * from barang where stok>0", CONN)
+        DS = New DataSet
+        DA.Fill(DS)
+        DGV2.DataSource = DS.Tables(0)
         DGV2.ReadOnly = True
     End Sub
 
     Private Sub Transaksi_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Call koneksi()
+        Call Koneksi()
         Call Otomatis()
         TTanggal.Text = Today
         Call tampilBarang()
@@ -94,16 +95,16 @@ Public Class FormTransaksi
     Private Sub TCariJasa_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TCariJasa.TextChanged
         DA = New OdbcDataAdapter("select * from jasa where Nama_Jasa like '%" & TCariJasa.Text & "%'", CONN)
         DS = New DataSet
-        da.Fill(ds)
-        DGV1.DataSource = ds.Tables(0)
+        DA.Fill(DS)
+        DGV1.DataSource = DS.Tables(0)
         DGV1.ReadOnly = True
     End Sub
 
     Private Sub TCariBarang_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TCariBarang.TextChanged
         DA = New OdbcDataAdapter("select * from barang where Nama_Barang like '%" & TCariBarang.Text & "%'", CONN)
         DS = New DataSet
-        da.Fill(ds)
-        DGV2.DataSource = ds.Tables(0)
+        DA.Fill(DS)
+        DGV2.DataSource = DS.Tables(0)
         DGV2.ReadOnly = True
 
     End Sub
@@ -140,8 +141,8 @@ Public Class FormTransaksi
         'jika baris jasa lebih banyak
         If Val(tbarisjasa.Text) > Val(tbarisbarang.Text) Then
             For baris As Integer = 0 To DGVJasa.RowCount - 2
-                cmd = New OdbcCommand("insert into detail values('" & TNomor.Text & "','-',0,0,0,'" & DGVJasa.Rows(baris).Cells(0).Value & "','" & DGVJasa.Rows(baris).Cells(2).Value & "')", conn)
-                cmd.ExecuteNonQuery()
+                CMD = New OdbcCommand("insert into detail values('" & TNomor.Text & "','-',0,0,0,'" & DGVJasa.Rows(baris).Cells(0).Value & "','" & DGVJasa.Rows(baris).Cells(2).Value & "')", CONN)
+                CMD.ExecuteNonQuery()
             Next
 
             For baris As Integer = 0 To DGVBarang.RowCount - 2
@@ -150,7 +151,7 @@ Public Class FormTransaksi
                 CMD.ExecuteNonQuery()
 
                 CMD = New OdbcCommand("select Stok from barang where Kode_Barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", CONN)
-                DR = cmd.ExecuteReader
+                DR = CMD.ExecuteReader
                 DR.Read()
                 If DR.HasRows Then
                     CMD = New OdbcCommand("update barang set Stok='" & DR.Item("Stok") - DGVBarang.Rows(baris).Cells(3).Value & "' where Kode_Barang='" &
@@ -168,7 +169,7 @@ Public Class FormTransaksi
                 CMD.ExecuteNonQuery()
 
                 CMD = New OdbcCommand("select stok from barang where Kode_Barang='" & DGVBarang.Rows(baris).Cells(0).Value & "'", CONN)
-                DR = cmd.ExecuteReader
+                DR = CMD.ExecuteReader
                 DR.Read()
                 If DR.HasRows Then
                     CMD = New OdbcCommand("update barang set Stok='" & DR.Item("Stok") - DGVBarang.Rows(baris).Cells(3).Value & "' where Kode_Barang='" &
@@ -188,6 +189,11 @@ Public Class FormTransaksi
 
 
         If MessageBox.Show("cetak faktur...", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            Dim Lap As New ReportDocument
+            Lap.Load("..\..\CRV.rpt")
+            FormLaporanService.CrystalReportViewer1.SelectionFormula = "Totext({service1.Nomor_Polisi})='" & TNopol.Text & "'"
+            FormLaporanService.CrystalReportViewer1.ReportSource = Lap
+            FormLaporanService.Show()
 
 
 
@@ -304,11 +310,11 @@ Public Class FormTransaksi
 
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) 
         If e.KeyChar = Chr(13) Then
-            If Val(Microsoft.VisualBasic.Str(TNamaAdmin.Text)) < Val(Microsoft.VisualBasic.Str(TTotalharga.Text)) Then
+            If Val(Microsoft.VisualBasic.Str(TDibayar.Text)) < Val(Microsoft.VisualBasic.Str(TTotalharga.Text)) Then
                 MsgBox("Pembayaran kurang")
                 Exit Sub
-            ElseIf Val(Microsoft.VisualBasic.Str(TNamaAdmin.Text)) >= Val(Microsoft.VisualBasic.Str(TTotalharga.Text)) Then
-                TextBox2.Text = Val(Microsoft.VisualBasic.Str(TNamaAdmin.Text)) - Val(Microsoft.VisualBasic.Str(TTotalharga.Text))
+            ElseIf Val(Microsoft.VisualBasic.Str(TDibayar.Text)) >= Val(Microsoft.VisualBasic.Str(TTotalharga.Text)) Then
+                TKembali.Text = Val(Microsoft.VisualBasic.Str(TDibayar.Text)) - Val(Microsoft.VisualBasic.Str(TTotalharga.Text))
                 'Button1.Enabled = True
             End If
             Button1.Focus()

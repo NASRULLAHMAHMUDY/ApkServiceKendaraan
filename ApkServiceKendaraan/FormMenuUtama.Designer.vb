@@ -36,6 +36,7 @@ Partial Class FormMenuUtama
         Me.Slabel9 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Slabel10 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Btn_Jasa = New System.Windows.Forms.Button()
         Me.Btn_Barang = New System.Windows.Forms.Button()
         Me.Btn_User = New System.Windows.Forms.Button()
@@ -47,12 +48,10 @@ Partial Class FormMenuUtama
         Me.Btn_Exit = New System.Windows.Forms.Button()
         Me.Btn_LogOff = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.BtnMekanik = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Btn_service = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -144,6 +143,15 @@ Partial Class FormMenuUtama
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Master"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(91, 24)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(92, 36)
+        Me.Button4.TabIndex = 9
+        Me.Button4.Text = "LOGIN"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Btn_Jasa
         '
@@ -306,7 +314,6 @@ Partial Class FormMenuUtama
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.BtnMekanik)
         Me.GroupBox1.Controls.Add(Me.GroupBox5)
         Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
@@ -319,15 +326,6 @@ Partial Class FormMenuUtama
         Me.GroupBox1.Size = New System.Drawing.Size(996, 186)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
-        '
-        'BtnMekanik
-        '
-        Me.BtnMekanik.Location = New System.Drawing.Point(909, 48)
-        Me.BtnMekanik.Name = "BtnMekanik"
-        Me.BtnMekanik.Size = New System.Drawing.Size(75, 90)
-        Me.BtnMekanik.TabIndex = 4
-        Me.BtnMekanik.Text = "Mekanik"
-        Me.BtnMekanik.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
@@ -358,6 +356,10 @@ Partial Class FormMenuUtama
         Me.Btn_service.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Btn_service.UseVisualStyleBackColor = True
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -367,19 +369,6 @@ Partial Class FormMenuUtama
         Me.PictureBox1.Size = New System.Drawing.Size(996, 386)
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(91, 24)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(92, 36)
-        Me.Button4.TabIndex = 9
-        Me.Button4.Text = "LOGIN"
-        Me.Button4.UseVisualStyleBackColor = True
         '
         'FormMenuUtama
         '
@@ -426,7 +415,6 @@ Partial Class FormMenuUtama
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents BtnMekanik As Button
     Friend WithEvents Slabel2 As ToolStripStatusLabel
     Friend WithEvents Slabel3 As ToolStripStatusLabel
     Friend WithEvents Slabel4 As ToolStripStatusLabel

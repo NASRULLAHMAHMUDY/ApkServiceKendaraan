@@ -109,6 +109,18 @@
       <DependentUpon>CRV.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CVR3.vb">
+      <DependentUpon>CVR3.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CVR2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CVR2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormBarang.Designer.vb">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </Compile>
@@ -131,6 +143,24 @@
       <DependentUpon>FormJasa.vb</DependentUpon>
     </Compile>
     <Compile Include="FormJasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanJasa.Designer.vb">
+      <DependentUpon>FormLaporanJasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanJasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanMaster.Designer.vb">
+      <DependentUpon>FormLaporanMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanService.Designer.vb">
+      <DependentUpon>FormLaporanService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanService.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.vb">
@@ -187,6 +217,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRV.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CVR3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CVR3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CVR2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CVR2.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +236,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormJasa.resx">
       <DependentUpon>FormJasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanJasa.resx">
+      <DependentUpon>FormLaporanJasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanMaster.resx">
+      <DependentUpon>FormLaporanMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanService.resx">
+      <DependentUpon>FormLaporanService.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
