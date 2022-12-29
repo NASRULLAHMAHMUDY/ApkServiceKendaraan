@@ -1,10 +1,11 @@
 ﻿Imports System.Data.Odbc
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class FormHistoriService
 
     Sub Kosongkan()
-        ComboBox1.Text = ""
+        CmbNomor.Text = ""
         TTanggal.Text = ""
         TNopol.Text = ""
         TKeluhan.Text = ""
@@ -26,7 +27,7 @@ Public Class FormHistoriService
         TKembali.Text = DR.Item("kembali")
     End Sub
     Sub detailJasa()
-        DA = New OdbcDataAdapter("select Nama_jasa,harga_jasa from jasa,detail where jasa.kode_jasa=detail.kode_jasa and nomor='" & ComboBox1.Text & "'", CONN)
+        DA = New OdbcDataAdapter("select Nama_jasa,harga_jasa from jasa,detail where jasa.kode_jasa=detail.kode_jasa and nomor='" & CmbNomor.Text & "'", CONN)
         DS = New DataSet
         DA.Fill(DS)
         DGVJasa.DataSource = DS.Tables(0)
@@ -36,7 +37,7 @@ Public Class FormHistoriService
         DGVJasa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
     Sub detailBarang()
-        DA = New OdbcDataAdapter("select barang.nama_barang,harga_barang,detail.Jumlah,Total from barang,detail where barang.kode_barang=detail.kode_barang and nomor='" & ComboBox1.Text & "'", CONN)
+        DA = New OdbcDataAdapter("select barang.nama_barang,harga_barang,detail.Jumlah,Total from barang,detail where barang.kode_barang=detail.kode_barang and nomor='" & CmbNomor.Text & "'", CONN)
         DS = New DataSet
         DA.Fill(DS)
         DGVBarang.DataSource = DS.Tables(0)
@@ -60,7 +61,7 @@ Public Class FormHistoriService
         CMD = New OdbcCommand("select nomor from service", CONN)
         DR = CMD.ExecuteReader
         Do While DR.Read
-            ComboBox1.Items.Add(DR.Item(0))
+            CmbNomor.Items.Add(DR.Item(0))
         Loop
     End Sub
 
@@ -73,8 +74,8 @@ Public Class FormHistoriService
         Me.Close()
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
-        CMD = New OdbcCommand("select * from service where nomor='" & ComboBox1.Text & "'", CONN)
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmbNomor.SelectedIndexChanged
+        CMD = New OdbcCommand("select * from service where nomor='" & CmbNomor.Text & "'", CONN)
         DR = CMD.ExecuteReader
         DR.Read()
         If DR.HasRows Then
@@ -88,5 +89,11 @@ Public Class FormHistoriService
         End If
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnCetak.Click
+        Dim Lap As New ReportDocument
+        Lap.Load("..\..\CVR4.rpt")
+        FormLapHistori.CrystalReportViewer1.SelectionFormula = "Totext({detail1.Nomor})='" & CmbNomor.Text & "'"
+        FormLapHistori.CrystalReportViewer1.ReportSource = Lap
+        FormLapHistori.Show()
+    End Sub
 End Class

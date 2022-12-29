@@ -8,10 +8,14 @@ Public Class FormMenuUtama
         Btn_Barang.Enabled = False
         Btn_Jasa.Enabled = False
         Btn_service.Enabled = False
-        Btn_Master.Enabled = False
-        Btn_Service_Lp.Enabled = False
+        Btn_LapBarang.Enabled = False
+        Btn_LapJasa.Enabled = False
+        Btn_LapJasa.Enabled = False
         Btn_Histori.Enabled = False
-        Btn_LogOff.Enabled = False
+        btnDataMaster.Enabled = False
+        btnTransaksi.Enabled = False
+        btnLaporan.Enabled = False
+        Btn_LogOff.Enabled = True
     End Sub
 
     Private Sub MenuUtama_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -20,29 +24,29 @@ Public Class FormMenuUtama
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_User.Click
-        FormAdmin.ShowDialog()
-    End Sub
+    'Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    FormAdmin.ShowDialog()
+    'End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Barang.Click
-        FormBarang.ShowDialog()
-    End Sub
+    'Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    FormBarang.ShowDialog()
+    'End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Jasa.Click
-        FormJasa.ShowDialog()
-    End Sub
+    'Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    FormJasa.ShowDialog()
+    'End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_service.Click
-        FormTransaksi.ShowDialog()
+    'Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    FormTransaksi.ShowDialog()
 
 
-    End Sub
+    'End Sub
 
-    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Histori.Click
-        FormHistoriService.ShowDialog()
-    End Sub
+    'Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    FormHistoriService.ShowDialog()
+    'End Sub
 
-    Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_LogOff.Click
+    Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
         FormLogin.Show()
         FormLogin.TxtNama.Clear()
@@ -50,43 +54,156 @@ Public Class FormMenuUtama
         FormLogin.TxtNama.Focus()
     End Sub
 
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Exit.Click
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If MessageBox.Show("Tutup aplikasi...?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             End
         End If
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    'Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        'Call Koneksi()
-        'CMD = New OdbcCommand("delete  from service", CONN)
-        'CMD.ExecuteNonQuery()
+    'Call Koneksi()
+    'CMD = New OdbcCommand("delete  from service", CONN)
+    'CMD.ExecuteNonQuery()
 
-        'CMD = New OdbcCommand("delete  from DETAIL", CONN)
-        'CMD.ExecuteNonQuery()
+    'CMD = New OdbcCommand("delete  from DETAIL", CONN)
+    'CMD.ExecuteNonQuery()
 
-        'MsgBox("data transaksi berhasil dihapus")
+    'MsgBox("data transaksi berhasil dihapus")
 
+    'End Sub
+
+    'Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
+    'End Sub
+
+    'Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    '    'Slabel10.Text = TimeOfDay
+    'End Sub
+
+    'Private Sub Button4_Click_1(sender As Object, e As EventArgs)
+    '    FormLogin.ShowDialog()
+    'End Sub
+
+    'Private Sub Btn_Master_Click(sender As Object, e As EventArgs)
+    '    FormLaporanBarang.Show()
+    '    FormLapHistori.Show()
+    'End Sub
+
+    'Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
+
+    'End Sub
+
+    Private Sub Btn_User_Click(sender As Object, e As EventArgs) Handles Btn_User.Click
+        FormAdmin.ShowDialog()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub Btn_Barang_Click(sender As Object, e As EventArgs) Handles Btn_Barang.Click
+        FormBarang.ShowDialog()
+    End Sub
 
+    Private Sub Btn_Jasa_Click(sender As Object, e As EventArgs) Handles Btn_Jasa.Click
+        FormJasa.ShowDialog()
+    End Sub
+
+    Private Sub Btn_Service_Click(sender As Object, e As EventArgs) Handles Btn_Service.Click
+        FormTransaksi.ShowDialog()
+    End Sub
+
+    Private Sub Btn_LapBarang_Click(sender As Object, e As EventArgs) Handles Btn_LapBarang.Click
+        FormLaporanBarang.ShowDialog()
+    End Sub
+
+    Private Sub Btn_LapJasa_Click(sender As Object, e As EventArgs) Handles Btn_LapJasa.Click
+        FormLaporanJasa.ShowDialog()
+    End Sub
+
+    Private Sub Btn_Histori_Click(sender As Object, e As EventArgs) Handles Btn_Histori.Click
+        FormLapHistori.ShowDialog()
+    End Sub
+
+    Private Sub btnDataMaster_Click(sender As Object, e As EventArgs) Handles btnDataMaster.Click
+        'Button Dipilih
+        lblSelected1.Visible = True
+        lblSelected2.Visible = False
+        lblSelected3.Visible = False
+        lblSelected4.Visible = False
+        lblSelected5.Visible = False
+        'Tampilkan panel konten
+        pnlDataMaster.Visible = True
+        pnlTransaksi.Visible = False
+        pnlLaporan.Visible = False
+    End Sub
+
+    Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
+        lblSelected1.Visible = False
+        lblSelected2.Visible = True
+        lblSelected3.Visible = False
+        lblSelected4.Visible = False
+        lblSelected5.Visible = False
+        'Tampilkan panel konten
+        pnlDataMaster.Visible = False
+        pnlTransaksi.Visible = True
+        pnlLaporan.Visible = False
+    End Sub
+
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        lblSelected1.Visible = False
+        lblSelected2.Visible = False
+        lblSelected3.Visible = True
+        lblSelected4.Visible = False
+        lblSelected5.Visible = False
+        'Tampilkan panel konten
+        pnlDataMaster.Visible = False
+        pnlTransaksi.Visible = False
+        pnlLaporan.Visible = True
+    End Sub
+
+    Private Sub btnTentang_Click(sender As Object, e As EventArgs) Handles Btn_LogOff.Click
+        lblSelected1.Visible = False
+        lblSelected2.Visible = False
+        lblSelected3.Visible = False
+        lblSelected4.Visible = True
+        lblSelected5.Visible = False
+        Me.Close()
+        FormLogin.Show()
+        FormLogin.TxtNama.Clear()
+        FormLogin.TxtPassword.Clear()
+        FormLogin.TxtNama.Focus()
+    End Sub
+
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        lblSelected1.Visible = False
+        lblSelected2.Visible = False
+        lblSelected3.Visible = False
+        lblSelected4.Visible = False
+        lblSelected5.Visible = True
+        End
+    End Sub
+
+    Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
+        If Me.WindowState = FormWindowState.Normal Then
+            Me.WindowState = FormWindowState.Maximized
+        Else
+            Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        FormLogin.ShowDialog()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Slabel10.Text = TimeOfDay
     End Sub
 
-    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
-        FormLogin.ShowDialog()
-    End Sub
 
-    Private Sub Btn_Master_Click(sender As Object, e As EventArgs) Handles Btn_Master.Click
-        FormLaporanMaster.Show()
-
-    End Sub
-
-    Private Sub Btn_Service_Lp_Click(sender As Object, e As EventArgs) Handles Btn_Service_Lp.Click
-
-    End Sub
 End Class

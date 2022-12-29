@@ -135,7 +135,7 @@ Public Class FormTransaksi
         End If
 
         CMD = New OdbcCommand("insert into service values ('" & TNomor.Text & "','" & Format(DateValue(TTanggal.Text), "yyyy-MM-dd") & "','" & TNopol.Text & "','" & TKeluhan.Text & "','" & TTLBiayaService.Text & "','" &
-                              TTLBiayaBarang.Text & "','" & TTotalharga.Text & "','" & TDibayar.Text & "','" & TKembali.Text & "','" & FormMenuUtama.Text & "','" & txtMontir.Text & "')", CONN)
+                              TTLBiayaBarang.Text & "','" & TTotalharga.Text & "','" & TDibayar.Text & "','" & TKembali.Text & "','" & FormLogin.TxtNama.Text & "','" & txtMontir.Text & "')", CONN)
         CMD.ExecuteNonQuery()
 
         'jika baris jasa lebih banyak
@@ -191,9 +191,9 @@ Public Class FormTransaksi
         If MessageBox.Show("cetak faktur...", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             Dim Lap As New ReportDocument
             Lap.Load("..\..\CRV.rpt")
-            FormLaporanService.CrystalReportViewer1.SelectionFormula = "Totext({service1.Nomor_Polisi})='" & TNopol.Text & "'"
-            FormLaporanService.CrystalReportViewer1.ReportSource = Lap
-            FormLaporanService.Show()
+            FormCetak.CrystalReportViewer1.SelectionFormula = "Totext({service1.Nomor_Polisi})='" & TNopol.Text & "'"
+            FormCetak.CrystalReportViewer1.ReportSource = Lap
+            FormCetak.Show()
 
 
 

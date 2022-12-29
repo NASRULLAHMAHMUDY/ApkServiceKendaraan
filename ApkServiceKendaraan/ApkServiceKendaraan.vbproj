@@ -121,6 +121,12 @@
       <DependentUpon>CVR2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CVR4.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CVR4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormBarang.Designer.vb">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </Compile>
@@ -145,22 +151,22 @@
     <Compile Include="FormJasa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormLapHistori.Designer.vb">
+      <DependentUpon>FormLapHistori.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLapHistori.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLaporanJasa.Designer.vb">
       <DependentUpon>FormLaporanJasa.vb</DependentUpon>
     </Compile>
     <Compile Include="FormLaporanJasa.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLaporanMaster.Designer.vb">
-      <DependentUpon>FormLaporanMaster.vb</DependentUpon>
+    <Compile Include="FormLaporanBarang.Designer.vb">
+      <DependentUpon>FormLaporanBarang.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormLaporanMaster.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLaporanService.Designer.vb">
-      <DependentUpon>FormLaporanService.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormLaporanService.vb">
+    <Compile Include="FormLaporanBarang.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.vb">
@@ -225,6 +231,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CVR2.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CVR4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CVR4.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </EmbeddedResource>
@@ -237,14 +247,14 @@
     <EmbeddedResource Include="FormJasa.resx">
       <DependentUpon>FormJasa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLapHistori.resx">
+      <DependentUpon>FormLapHistori.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLaporanJasa.resx">
       <DependentUpon>FormLaporanJasa.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLaporanMaster.resx">
-      <DependentUpon>FormLaporanMaster.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLaporanService.resx">
-      <DependentUpon>FormLaporanService.vb</DependentUpon>
+    <EmbeddedResource Include="FormLaporanBarang.resx">
+      <DependentUpon>FormLaporanBarang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
@@ -299,6 +309,84 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data master.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lap data master.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anggota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lap peminjaman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kategori buku.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rak buku.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lap peminjaman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kategori buku1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buku.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buku1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lap denda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data master1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaksi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laporan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tentang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backgroud.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20221208_140754.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20221208_142508.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

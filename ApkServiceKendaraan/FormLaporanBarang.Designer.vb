@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormLaporanService
+Partial Class FormLaporanBarang
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class FormLaporanService
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.CRV1 = New ApkServiceKendaraan.CRV()
+        Me.CVR21 = New ApkServiceKendaraan.CVR2()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -31,26 +31,25 @@ Partial Class FormLaporanService
         Me.CrystalReportViewer1.ActiveViewIndex = 0
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(12, -3)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.CRV1
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1051, 545)
-        Me.CrystalReportViewer1.TabIndex = 0
+        Me.CrystalReportViewer1.ReportSource = Me.CVR21
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(980, 591)
+        Me.CrystalReportViewer1.TabIndex = 1
         Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
-        'FormLaporanService
+        'FormLaporanBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1051, 545)
+        Me.ClientSize = New System.Drawing.Size(1004, 609)
         Me.Controls.Add(Me.CrystalReportViewer1)
-        Me.Name = "FormLaporanService"
-        Me.Text = "FormLaporanService"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Name = "FormLaporanBarang"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "FormLaporanMaster"
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents CRV1 As CRV
+    Friend WithEvents CVR21 As CVR2
 End Class

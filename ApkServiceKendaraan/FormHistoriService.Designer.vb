@@ -22,7 +22,7 @@ Partial Class FormHistoriService
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CmbNomor = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.DGVJasa = New System.Windows.Forms.DataGridView()
@@ -42,21 +42,21 @@ Partial Class FormHistoriService
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnCetak = New System.Windows.Forms.Button()
         Me.DGVBarang = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.DGVJasa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'CmbNomor
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(171, 11)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(148, 28)
-        Me.ComboBox1.TabIndex = 133
+        Me.CmbNomor.FormattingEnabled = True
+        Me.CmbNomor.Location = New System.Drawing.Point(171, 11)
+        Me.CmbNomor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CmbNomor.Name = "CmbNomor"
+        Me.CmbNomor.Size = New System.Drawing.Size(148, 28)
+        Me.CmbNomor.TabIndex = 133
         '
         'Label1
         '
@@ -251,15 +251,15 @@ Partial Class FormHistoriService
         Me.Button2.Text = "Batal"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'BtnCetak
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 561)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 62)
-        Me.Button1.TabIndex = 126
-        Me.Button1.Text = "Cetak"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnCetak.Location = New System.Drawing.Point(12, 561)
+        Me.BtnCetak.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnCetak.Name = "BtnCetak"
+        Me.BtnCetak.Size = New System.Drawing.Size(112, 62)
+        Me.BtnCetak.TabIndex = 126
+        Me.BtnCetak.Text = "Cetak"
+        Me.BtnCetak.UseVisualStyleBackColor = True
         '
         'DGVBarang
         '
@@ -286,7 +286,7 @@ Partial Class FormHistoriService
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(845, 699)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.CmbNomor)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.DGVJasa)
@@ -306,7 +306,7 @@ Partial Class FormHistoriService
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnCetak)
         Me.Controls.Add(Me.DGVBarang)
         Me.Controls.Add(Me.Label2)
         Me.Name = "FormHistoriService"
@@ -318,7 +318,7 @@ Partial Class FormHistoriService
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CmbNomor As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents DGVJasa As DataGridView
@@ -338,7 +338,7 @@ Partial Class FormHistoriService
     Friend WithEvents Label9 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnCetak As Button
     Friend WithEvents DGVBarang As DataGridView
     Friend WithEvents Label2 As Label
 End Class
