@@ -32,6 +32,10 @@ Partial Class FormLogin
         Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         Me.TxtNama = New System.Windows.Forms.TextBox()
         Me.TxtPassword = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,7 +52,7 @@ Partial Class FormLogin
         '
         'Label2
         '
-        Me.Label2.BackColor = System.Drawing.Color.Silver
+        Me.Label2.BackColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(619, 348)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(295, 1)
@@ -56,7 +60,7 @@ Partial Class FormLogin
         '
         'Label1
         '
-        Me.Label1.BackColor = System.Drawing.Color.Silver
+        Me.Label1.BackColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(623, 273)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(295, 1)
@@ -103,7 +107,7 @@ Partial Class FormLogin
         Me.btnClose.FlatAppearance.BorderSize = 0
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClose.Image = Global.ApkServiceKendaraan.My.Resources.Resources.close
-        Me.btnClose.Location = New System.Drawing.Point(907, 12)
+        Me.btnClose.Location = New System.Drawing.Point(907, 23)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(15, 15)
         Me.btnClose.TabIndex = 28
@@ -126,26 +130,63 @@ Partial Class FormLogin
         Me.TxtNama.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNama.ForeColor = System.Drawing.Color.Silver
-        Me.TxtNama.Location = New System.Drawing.Point(623, 237)
-        Me.TxtNama.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TxtNama.Multiline = True
+        Me.TxtNama.Location = New System.Drawing.Point(623, 233)
         Me.TxtNama.Name = "TxtNama"
-        Me.TxtNama.Size = New System.Drawing.Size(299, 31)
+        Me.TxtNama.Size = New System.Drawing.Size(295, 28)
         Me.TxtNama.TabIndex = 29
         Me.TxtNama.Text = "Username"
         '
         'TxtPassword
         '
+        Me.TxtPassword.BackColor = System.Drawing.Color.White
         Me.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPassword.ForeColor = System.Drawing.Color.Silver
-        Me.TxtPassword.Location = New System.Drawing.Point(623, 312)
-        Me.TxtPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TxtPassword.Multiline = True
+        Me.TxtPassword.Location = New System.Drawing.Point(619, 310)
         Me.TxtPassword.Name = "TxtPassword"
-        Me.TxtPassword.Size = New System.Drawing.Size(299, 31)
+        Me.TxtPassword.Size = New System.Drawing.Size(295, 28)
         Me.TxtPassword.TabIndex = 30
         Me.TxtPassword.Text = "Password"
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.DarkViolet
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.DarkViolet
+        Me.Label4.Location = New System.Drawing.Point(600, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(348, 10)
+        Me.Label4.TabIndex = 31
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.DarkViolet
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DarkViolet
+        Me.Label3.Location = New System.Drawing.Point(596, 467)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(352, 10)
+        Me.Label3.TabIndex = 32
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.DarkViolet
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.DarkViolet
+        Me.Label5.Location = New System.Drawing.Point(938, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(10, 459)
+        Me.Label5.TabIndex = 33
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.DarkViolet
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.DarkViolet
+        Me.Label6.Location = New System.Drawing.Point(600, 8)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(10, 469)
+        Me.Label6.TabIndex = 34
         '
         'FormLogin
         '
@@ -153,6 +194,10 @@ Partial Class FormLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(947, 477)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TxtPassword)
         Me.Controls.Add(Me.TxtNama)
         Me.Controls.Add(Me.btnClose)
@@ -182,4 +227,8 @@ Partial Class FormLogin
     Friend WithEvents LogoPictureBox As PictureBox
     Friend WithEvents TxtNama As TextBox
     Friend WithEvents TxtPassword As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
 End Class

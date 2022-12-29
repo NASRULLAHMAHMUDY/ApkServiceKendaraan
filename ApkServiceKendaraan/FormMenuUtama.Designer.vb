@@ -49,29 +49,29 @@ Partial Class FormMenuUtama
         Me.Slabel10 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Btn_Jasa = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Btn_Barang = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Btn_User = New System.Windows.Forms.Button()
         Me.pnlTransaksi = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Btn_Service = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.pnlLaporan = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Btn_Histori = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Btn_LapJasa = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.Btn_LapBarang = New System.Windows.Forms.Button()
         Me.pnlTop = New System.Windows.Forms.Panel()
         Me.pnlControl = New System.Windows.Forms.Panel()
-        Me.pnlLeft = New System.Windows.Forms.Panel()
-        Me.Btn_Jasa = New System.Windows.Forms.Button()
-        Me.Btn_Barang = New System.Windows.Forms.Button()
-        Me.Btn_User = New System.Windows.Forms.Button()
-        Me.Btn_Service = New System.Windows.Forms.Button()
-        Me.Btn_Histori = New System.Windows.Forms.Button()
-        Me.Btn_LapJasa = New System.Windows.Forms.Button()
-        Me.Btn_LapBarang = New System.Windows.Forms.Button()
         Me.btnMinimize = New System.Windows.Forms.Button()
         Me.btnMaximize = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.pnlLeft = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Btn_LogOff = New System.Windows.Forms.Button()
         Me.btnLaporan = New System.Windows.Forms.Button()
@@ -313,6 +313,18 @@ Partial Class FormMenuUtama
         Me.Label6.Text = "Jasa"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Btn_Jasa
+        '
+        Me.Btn_Jasa.BackColor = System.Drawing.Color.Silver
+        Me.Btn_Jasa.FlatAppearance.BorderSize = 0
+        Me.Btn_Jasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Jasa.Image = Global.ApkServiceKendaraan.My.Resources.Resources.buku
+        Me.Btn_Jasa.Location = New System.Drawing.Point(450, 79)
+        Me.Btn_Jasa.Name = "Btn_Jasa"
+        Me.Btn_Jasa.Size = New System.Drawing.Size(179, 190)
+        Me.Btn_Jasa.TabIndex = 19
+        Me.Btn_Jasa.UseVisualStyleBackColor = False
+        '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
@@ -324,6 +336,18 @@ Partial Class FormMenuUtama
         Me.Label5.Text = "Barang"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Btn_Barang
+        '
+        Me.Btn_Barang.BackColor = System.Drawing.Color.Silver
+        Me.Btn_Barang.FlatAppearance.BorderSize = 0
+        Me.Btn_Barang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Barang.Image = Global.ApkServiceKendaraan.My.Resources.Resources.rak_buku
+        Me.Btn_Barang.Location = New System.Drawing.Point(242, 79)
+        Me.Btn_Barang.Name = "Btn_Barang"
+        Me.Btn_Barang.Size = New System.Drawing.Size(179, 190)
+        Me.Btn_Barang.TabIndex = 17
+        Me.Btn_Barang.UseVisualStyleBackColor = False
+        '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
@@ -334,6 +358,18 @@ Partial Class FormMenuUtama
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Admin"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Btn_User
+        '
+        Me.Btn_User.BackColor = System.Drawing.Color.Silver
+        Me.Btn_User.FlatAppearance.BorderSize = 0
+        Me.Btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_User.Image = Global.ApkServiceKendaraan.My.Resources.Resources.admin__1_
+        Me.Btn_User.Location = New System.Drawing.Point(30, 79)
+        Me.Btn_User.Name = "Btn_User"
+        Me.Btn_User.Size = New System.Drawing.Size(179, 190)
+        Me.Btn_User.TabIndex = 15
+        Me.Btn_User.UseVisualStyleBackColor = False
         '
         'pnlTransaksi
         '
@@ -357,6 +393,18 @@ Partial Class FormMenuUtama
         Me.Label11.TabIndex = 16
         Me.Label11.Text = "Service"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Btn_Service
+        '
+        Me.Btn_Service.BackColor = System.Drawing.Color.Silver
+        Me.Btn_Service.FlatAppearance.BorderSize = 0
+        Me.Btn_Service.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Service.Image = Global.ApkServiceKendaraan.My.Resources.Resources.lap_denda
+        Me.Btn_Service.Location = New System.Drawing.Point(30, 79)
+        Me.Btn_Service.Name = "Btn_Service"
+        Me.Btn_Service.Size = New System.Drawing.Size(179, 190)
+        Me.Btn_Service.TabIndex = 15
+        Me.Btn_Service.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -407,6 +455,18 @@ Partial Class FormMenuUtama
         Me.Label10.Text = "Histori"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Btn_Histori
+        '
+        Me.Btn_Histori.BackColor = System.Drawing.Color.Silver
+        Me.Btn_Histori.FlatAppearance.BorderSize = 0
+        Me.Btn_Histori.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Histori.Image = Global.ApkServiceKendaraan.My.Resources.Resources.kategori_buku
+        Me.Btn_Histori.Location = New System.Drawing.Point(450, 79)
+        Me.Btn_Histori.Name = "Btn_Histori"
+        Me.Btn_Histori.Size = New System.Drawing.Size(179, 190)
+        Me.Btn_Histori.TabIndex = 19
+        Me.Btn_Histori.UseVisualStyleBackColor = False
+        '
         'Label12
         '
         Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
@@ -418,6 +478,18 @@ Partial Class FormMenuUtama
         Me.Label12.Text = "Jasa"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Btn_LapJasa
+        '
+        Me.Btn_LapJasa.BackColor = System.Drawing.Color.Silver
+        Me.Btn_LapJasa.FlatAppearance.BorderSize = 0
+        Me.Btn_LapJasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_LapJasa.Image = Global.ApkServiceKendaraan.My.Resources.Resources.anggota
+        Me.Btn_LapJasa.Location = New System.Drawing.Point(242, 79)
+        Me.Btn_LapJasa.Name = "Btn_LapJasa"
+        Me.Btn_LapJasa.Size = New System.Drawing.Size(179, 190)
+        Me.Btn_LapJasa.TabIndex = 17
+        Me.Btn_LapJasa.UseVisualStyleBackColor = False
+        '
         'Label13
         '
         Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
@@ -428,6 +500,18 @@ Partial Class FormMenuUtama
         Me.Label13.TabIndex = 16
         Me.Label13.Text = "Barang"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Btn_LapBarang
+        '
+        Me.Btn_LapBarang.BackColor = System.Drawing.Color.Silver
+        Me.Btn_LapBarang.FlatAppearance.BorderSize = 0
+        Me.Btn_LapBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_LapBarang.Image = Global.ApkServiceKendaraan.My.Resources.Resources.lap_data_master
+        Me.Btn_LapBarang.Location = New System.Drawing.Point(30, 79)
+        Me.Btn_LapBarang.Name = "Btn_LapBarang"
+        Me.Btn_LapBarang.Size = New System.Drawing.Size(179, 190)
+        Me.Btn_LapBarang.TabIndex = 15
+        Me.Btn_LapBarang.UseVisualStyleBackColor = False
         '
         'pnlTop
         '
@@ -449,113 +533,6 @@ Partial Class FormMenuUtama
         Me.pnlControl.Name = "pnlControl"
         Me.pnlControl.Size = New System.Drawing.Size(97, 37)
         Me.pnlControl.TabIndex = 0
-        '
-        'pnlLeft
-        '
-        Me.pnlLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.pnlLeft.Controls.Add(Me.PictureBox1)
-        Me.pnlLeft.Controls.Add(Me.btnLogin)
-        Me.pnlLeft.Controls.Add(Me.Label4)
-        Me.pnlLeft.Controls.Add(Me.lblNamaUser)
-        Me.pnlLeft.Controls.Add(Me.Label1)
-        Me.pnlLeft.Controls.Add(Me.lblSelected4)
-        Me.pnlLeft.Controls.Add(Me.Btn_LogOff)
-        Me.pnlLeft.Controls.Add(Me.Panel1)
-        Me.pnlLeft.Controls.Add(Me.lblSelected3)
-        Me.pnlLeft.Controls.Add(Me.btnLaporan)
-        Me.pnlLeft.Controls.Add(Me.lblSelected2)
-        Me.pnlLeft.Controls.Add(Me.btnTransaksi)
-        Me.pnlLeft.Controls.Add(Me.lblSelected1)
-        Me.pnlLeft.Controls.Add(Me.btnDataMaster)
-        Me.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlLeft.Location = New System.Drawing.Point(0, 0)
-        Me.pnlLeft.Name = "pnlLeft"
-        Me.pnlLeft.Size = New System.Drawing.Size(270, 604)
-        Me.pnlLeft.TabIndex = 22
-        '
-        'Btn_Jasa
-        '
-        Me.Btn_Jasa.BackColor = System.Drawing.Color.Silver
-        Me.Btn_Jasa.FlatAppearance.BorderSize = 0
-        Me.Btn_Jasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Jasa.Image = Global.ApkServiceKendaraan.My.Resources.Resources.buku
-        Me.Btn_Jasa.Location = New System.Drawing.Point(450, 79)
-        Me.Btn_Jasa.Name = "Btn_Jasa"
-        Me.Btn_Jasa.Size = New System.Drawing.Size(179, 190)
-        Me.Btn_Jasa.TabIndex = 19
-        Me.Btn_Jasa.UseVisualStyleBackColor = False
-        '
-        'Btn_Barang
-        '
-        Me.Btn_Barang.BackColor = System.Drawing.Color.Silver
-        Me.Btn_Barang.FlatAppearance.BorderSize = 0
-        Me.Btn_Barang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Barang.Image = Global.ApkServiceKendaraan.My.Resources.Resources.rak_buku
-        Me.Btn_Barang.Location = New System.Drawing.Point(242, 79)
-        Me.Btn_Barang.Name = "Btn_Barang"
-        Me.Btn_Barang.Size = New System.Drawing.Size(179, 190)
-        Me.Btn_Barang.TabIndex = 17
-        Me.Btn_Barang.UseVisualStyleBackColor = False
-        '
-        'Btn_User
-        '
-        Me.Btn_User.BackColor = System.Drawing.Color.Silver
-        Me.Btn_User.FlatAppearance.BorderSize = 0
-        Me.Btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_User.Image = Global.ApkServiceKendaraan.My.Resources.Resources.admin__1_
-        Me.Btn_User.Location = New System.Drawing.Point(30, 79)
-        Me.Btn_User.Name = "Btn_User"
-        Me.Btn_User.Size = New System.Drawing.Size(179, 190)
-        Me.Btn_User.TabIndex = 15
-        Me.Btn_User.UseVisualStyleBackColor = False
-        '
-        'Btn_Service
-        '
-        Me.Btn_Service.BackColor = System.Drawing.Color.Silver
-        Me.Btn_Service.FlatAppearance.BorderSize = 0
-        Me.Btn_Service.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Service.Image = Global.ApkServiceKendaraan.My.Resources.Resources.lap_denda
-        Me.Btn_Service.Location = New System.Drawing.Point(30, 79)
-        Me.Btn_Service.Name = "Btn_Service"
-        Me.Btn_Service.Size = New System.Drawing.Size(179, 190)
-        Me.Btn_Service.TabIndex = 15
-        Me.Btn_Service.UseVisualStyleBackColor = False
-        '
-        'Btn_Histori
-        '
-        Me.Btn_Histori.BackColor = System.Drawing.Color.Silver
-        Me.Btn_Histori.FlatAppearance.BorderSize = 0
-        Me.Btn_Histori.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Histori.Image = Global.ApkServiceKendaraan.My.Resources.Resources.kategori_buku
-        Me.Btn_Histori.Location = New System.Drawing.Point(450, 79)
-        Me.Btn_Histori.Name = "Btn_Histori"
-        Me.Btn_Histori.Size = New System.Drawing.Size(179, 190)
-        Me.Btn_Histori.TabIndex = 19
-        Me.Btn_Histori.UseVisualStyleBackColor = False
-        '
-        'Btn_LapJasa
-        '
-        Me.Btn_LapJasa.BackColor = System.Drawing.Color.Silver
-        Me.Btn_LapJasa.FlatAppearance.BorderSize = 0
-        Me.Btn_LapJasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_LapJasa.Image = Global.ApkServiceKendaraan.My.Resources.Resources.anggota
-        Me.Btn_LapJasa.Location = New System.Drawing.Point(242, 79)
-        Me.Btn_LapJasa.Name = "Btn_LapJasa"
-        Me.Btn_LapJasa.Size = New System.Drawing.Size(179, 190)
-        Me.Btn_LapJasa.TabIndex = 17
-        Me.Btn_LapJasa.UseVisualStyleBackColor = False
-        '
-        'Btn_LapBarang
-        '
-        Me.Btn_LapBarang.BackColor = System.Drawing.Color.Silver
-        Me.Btn_LapBarang.FlatAppearance.BorderSize = 0
-        Me.Btn_LapBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_LapBarang.Image = Global.ApkServiceKendaraan.My.Resources.Resources.lap_data_master
-        Me.Btn_LapBarang.Location = New System.Drawing.Point(30, 79)
-        Me.Btn_LapBarang.Name = "Btn_LapBarang"
-        Me.Btn_LapBarang.Size = New System.Drawing.Size(179, 190)
-        Me.Btn_LapBarang.TabIndex = 15
-        Me.Btn_LapBarang.UseVisualStyleBackColor = False
         '
         'btnMinimize
         '
@@ -589,6 +566,29 @@ Partial Class FormMenuUtama
         Me.btnClose.Size = New System.Drawing.Size(15, 15)
         Me.btnClose.TabIndex = 17
         Me.btnClose.UseVisualStyleBackColor = True
+        '
+        'pnlLeft
+        '
+        Me.pnlLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.pnlLeft.Controls.Add(Me.PictureBox1)
+        Me.pnlLeft.Controls.Add(Me.btnLogin)
+        Me.pnlLeft.Controls.Add(Me.Label4)
+        Me.pnlLeft.Controls.Add(Me.lblNamaUser)
+        Me.pnlLeft.Controls.Add(Me.Label1)
+        Me.pnlLeft.Controls.Add(Me.lblSelected4)
+        Me.pnlLeft.Controls.Add(Me.Btn_LogOff)
+        Me.pnlLeft.Controls.Add(Me.Panel1)
+        Me.pnlLeft.Controls.Add(Me.lblSelected3)
+        Me.pnlLeft.Controls.Add(Me.btnLaporan)
+        Me.pnlLeft.Controls.Add(Me.lblSelected2)
+        Me.pnlLeft.Controls.Add(Me.btnTransaksi)
+        Me.pnlLeft.Controls.Add(Me.lblSelected1)
+        Me.pnlLeft.Controls.Add(Me.btnDataMaster)
+        Me.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.pnlLeft.Name = "pnlLeft"
+        Me.pnlLeft.Size = New System.Drawing.Size(270, 604)
+        Me.pnlLeft.TabIndex = 22
         '
         'PictureBox1
         '

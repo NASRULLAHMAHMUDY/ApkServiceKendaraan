@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9DDC886F-A92D-45B7-900F-539F04E7829C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ApkServiceKendaraan.SplashScreen</StartupObject>
+    <StartupObject>ApkServiceKendaraan.FormLogin</StartupObject>
     <RootNamespace>ApkServiceKendaraan</RootNamespace>
     <AssemblyName>ApkServiceKendaraan</AssemblyName>
     <FileAlignment>512</FileAlignment>

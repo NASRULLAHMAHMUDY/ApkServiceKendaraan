@@ -2,12 +2,11 @@
 Imports Microsoft.VisualBasic.ApplicationServices
 
 Public Class FormMenuUtama
-
     Sub Kunci()
         Btn_User.Enabled = False
         Btn_Barang.Enabled = False
         Btn_Jasa.Enabled = False
-        Btn_service.Enabled = False
+        Btn_Service.Enabled = False
         Btn_LapBarang.Enabled = False
         Btn_LapJasa.Enabled = False
         Btn_LapJasa.Enabled = False
@@ -24,28 +23,6 @@ Public Class FormMenuUtama
 
     End Sub
 
-    'Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    FormAdmin.ShowDialog()
-    'End Sub
-
-    'Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    FormBarang.ShowDialog()
-    'End Sub
-
-    'Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    FormJasa.ShowDialog()
-    'End Sub
-
-    'Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    FormTransaksi.ShowDialog()
-
-
-    'End Sub
-
-    'Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    FormHistoriService.ShowDialog()
-    'End Sub
-
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
         FormLogin.Show()
@@ -59,41 +36,6 @@ Public Class FormMenuUtama
             End
         End If
     End Sub
-
-    'Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    'Call Koneksi()
-    'CMD = New OdbcCommand("delete  from service", CONN)
-    'CMD.ExecuteNonQuery()
-
-    'CMD = New OdbcCommand("delete  from DETAIL", CONN)
-    'CMD.ExecuteNonQuery()
-
-    'MsgBox("data transaksi berhasil dihapus")
-
-    'End Sub
-
-    'Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-
-    'End Sub
-
-    'Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-    '    'Slabel10.Text = TimeOfDay
-    'End Sub
-
-    'Private Sub Button4_Click_1(sender As Object, e As EventArgs)
-    '    FormLogin.ShowDialog()
-    'End Sub
-
-    'Private Sub Btn_Master_Click(sender As Object, e As EventArgs)
-    '    FormLaporanBarang.Show()
-    '    FormLapHistori.Show()
-    'End Sub
-
-    'Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
-
-    'End Sub
-
     Private Sub Btn_User_Click(sender As Object, e As EventArgs) Handles Btn_User.Click
         FormAdmin.ShowDialog()
     End Sub

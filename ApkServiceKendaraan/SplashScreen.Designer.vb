@@ -76,14 +76,14 @@ Partial Class SplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 377)
         Me.ControlBox = False
         Me.Controls.Add(Me.lbl_Loading)
         Me.Controls.Add(Me.Pb_Progress)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
-        Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "SplashScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
