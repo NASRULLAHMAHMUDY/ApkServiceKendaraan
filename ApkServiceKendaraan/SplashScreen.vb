@@ -16,4 +16,16 @@
         lbl_Loading.Text = "Loading... " & newprogress & "%"
 
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lbl1.Click
+
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        If lbl1.Left >= Me.Width Then
+            lbl1.Left = -lbl1.Width
+        Else
+            lbl1.Left = lbl1.Left + 100
+        End If
+    End Sub
 End Class

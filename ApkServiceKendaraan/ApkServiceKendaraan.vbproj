@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9DDC886F-A92D-45B7-900F-539F04E7829C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ApkServiceKendaraan.FormLogin</StartupObject>
+    <StartupObject>ApkServiceKendaraan.SplashScreen</StartupObject>
     <RootNamespace>ApkServiceKendaraan</RootNamespace>
     <AssemblyName>ApkServiceKendaraan</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -32,7 +32,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -107,13 +107,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRV.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CVR3.vb">
       <DependentUpon>CVR3.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CVR2.vb">
       <AutoGen>True</AutoGen>

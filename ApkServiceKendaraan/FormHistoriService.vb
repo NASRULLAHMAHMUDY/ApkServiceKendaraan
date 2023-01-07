@@ -96,4 +96,9 @@ Public Class FormHistoriService
         FormLapHistori.CrystalReportViewer1.ReportSource = Lap
         FormLapHistori.Show()
     End Sub
+
+    Private Sub FormHistoriService_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
+        Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.Gray, Drawing2D.LinearGradientMode.Horizontal)
+        e.Graphics.FillRectangle(i, Me.ClientRectangle)
+    End Sub
 End Class

@@ -292,6 +292,7 @@ Partial Class FormTransaksi
         'DGV2
         '
         Me.DGV2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.DGV2.BackgroundColor = System.Drawing.Color.Silver
         Me.DGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV2.Location = New System.Drawing.Point(845, 401)
         Me.DGV2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -303,6 +304,7 @@ Partial Class FormTransaksi
         'DGV1
         '
         Me.DGV1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.DGV1.BackgroundColor = System.Drawing.Color.Silver
         Me.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV1.Location = New System.Drawing.Point(843, 95)
         Me.DGV1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -381,6 +383,7 @@ Partial Class FormTransaksi
         '
         'DGVBarang
         '
+        Me.DGVBarang.BackgroundColor = System.Drawing.Color.Silver
         Me.DGVBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVBarang.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.Nama, Me.DataGridViewTextBoxColumn2, Me.Jumlah, Me.Total})
         Me.DGVBarang.Location = New System.Drawing.Point(7, 401)
@@ -420,6 +423,7 @@ Partial Class FormTransaksi
         '
         'DGVJasa
         '
+        Me.DGVJasa.BackgroundColor = System.Drawing.Color.Silver
         Me.DGVJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVJasa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Kode, Me.Jasa, Me.Harga})
         Me.DGVJasa.Location = New System.Drawing.Point(5, 95)
@@ -458,6 +462,7 @@ Partial Class FormTransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(1289, 792)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)

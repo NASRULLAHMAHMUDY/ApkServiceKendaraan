@@ -23,23 +23,24 @@ Partial Class SplashScreen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lbl1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Pb_Progress = New System.Windows.Forms.ProgressBar()
         Me.lbl_Loading = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'lbl1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(220, 40)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(361, 36)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Delear Service Kendaraan"
+        Me.lbl1.AutoSize = True
+        Me.lbl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl1.Location = New System.Drawing.Point(220, 40)
+        Me.lbl1.Name = "lbl1"
+        Me.lbl1.Size = New System.Drawing.Size(361, 36)
+        Me.lbl1.TabIndex = 0
+        Me.lbl1.Text = "Delear Service Kendaraan"
         '
         'PictureBox1
         '
@@ -72,6 +73,11 @@ Partial Class SplashScreen
         '
         Me.Timer1.Enabled = True
         '
+        'Timer2
+        '
+        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 1000
+        '
         'SplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -82,7 +88,7 @@ Partial Class SplashScreen
         Me.Controls.Add(Me.lbl_Loading)
         Me.Controls.Add(Me.Pb_Progress)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lbl1)
         Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "SplashScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -92,9 +98,10 @@ Partial Class SplashScreen
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lbl1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Pb_Progress As ProgressBar
     Friend WithEvents lbl_Loading As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
 End Class

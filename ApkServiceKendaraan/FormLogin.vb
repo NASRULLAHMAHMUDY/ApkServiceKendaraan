@@ -1,14 +1,16 @@
 ﻿Imports System.Data.Odbc
 Public Class FormLogin
     Sub Bersih()
-        TxtNama.Text = ""
+        TxtNama.Text = "Username"
         TxtPassword.Text = ""
     End Sub
     Sub Buka()
+        FormMenuUtama.Button1.Enabled = True
         FormMenuUtama.Btn_User.Enabled = True
         FormMenuUtama.Btn_Barang.Enabled = True
         FormMenuUtama.Btn_Jasa.Enabled = True
-        FormMenuUtama.Btn_service.Enabled = True
+        FormMenuUtama.Btn_Service.Enabled = True
+        FormMenuUtama.BtnHistoriService.Enabled = True
         FormMenuUtama.Btn_LapBarang.Enabled = True
         FormMenuUtama.Btn_LapJasa.Enabled = True
         FormMenuUtama.Btn_Histori.Enabled = True
@@ -91,4 +93,5 @@ Public Class FormLogin
             TxtNama.ForeColor = Color.Black
         End If
     End Sub
+
 End Class
