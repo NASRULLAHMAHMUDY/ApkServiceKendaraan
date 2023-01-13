@@ -28,4 +28,9 @@
             lbl1.Left = lbl1.Left + 100
         End If
     End Sub
+
+    Private Sub SplashScreen_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
+        Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.Green, Drawing2D.LinearGradientMode.Vertical)
+        e.Graphics.FillRectangle(i, Me.ClientRectangle)
+    End Sub
 End Class

@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _38834_service_animation() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("38834-service-animation", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property _70827_gearloading() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("70827-gearloading", resourceCulture)

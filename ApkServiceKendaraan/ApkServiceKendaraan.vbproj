@@ -107,17 +107,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CVR2.vb">
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CVR2.rpt</DependentUpon>
     </Compile>
     <Compile Include="CVR3.vb">
       <DependentUpon>CVR3.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CVR2.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CVR2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CVR4.vb">
@@ -193,6 +194,9 @@
     <Compile Include="FormAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Model\Admin.vb" />
+    <Compile Include="Model\Barang.vb" />
+    <Compile Include="Model\Jasa.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -222,13 +226,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRV.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CVR3.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CVR3.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="CVR2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CVR2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CVR3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CVR3.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CVR4.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -386,6 +390,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\20221208_142508.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38834-service-animation.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -13,7 +13,6 @@ Public Class FormMenuUtama
         Btn_LapBarang.Enabled = False
         Btn_LapJasa.Enabled = False
         Btn_LapJasa.Enabled = False
-        Btn_Histori.Enabled = False
         btnDataMaster.Enabled = False
         btnTransaksi.Enabled = False
         btnLaporan.Enabled = False
@@ -63,7 +62,7 @@ Public Class FormMenuUtama
         FormLaporanJasa.ShowDialog()
     End Sub
 
-    Private Sub Btn_Histori_Click(sender As Object, e As EventArgs) Handles Btn_Histori.Click
+    Private Sub Btn_Histori_Click(sender As Object, e As EventArgs)
         FormLapHistori.ShowDialog()
     End Sub
 
@@ -178,43 +177,48 @@ Public Class FormMenuUtama
     End Sub
 
     Private Sub pnlHome_Paint(sender As Object, e As PaintEventArgs) Handles pnlHome.Paint
-        Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.White, Drawing2D.LinearGradientMode.Vertical)
+        Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.Green, Drawing2D.LinearGradientMode.Vertical)
         e.Graphics.FillRectangle(i, Me.ClientRectangle)
     End Sub
 
-    Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
+    'Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
 
-        i = i + 1
-        If i = 2 Then
-            i = 0
-        End If
-        If i Mod 2 = 0 Then
-            lblnama1.Visible = True
-            lblnama2.Visible = True
-        Else
-            lblnama1.Visible = False
-            lblnama2.Visible = False
-        End If
-    End Sub
+    '    i = i + 1
+    '    If i = 2 Then
+    '        i = 0
+    '    End If
+    '    If i Mod 2 = 0 Then
+    '        lblnama1.Visible = True
+    '        lblnama2.Visible = True
+    '    Else
+    '        lblnama1.Visible = False
+    '        lblnama2.Visible = False
+    '    End If
+    'End Sub
 
     Private Sub pnlTransaksi_Paint(sender As Object, e As PaintEventArgs) Handles pnlTransaksi.Paint
         Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.Gray, Drawing2D.LinearGradientMode.Vertical)
         e.Graphics.FillRectangle(i, Me.ClientRectangle)
     End Sub
 
-    Private Sub BtnHistoriService_Click(sender As Object, e As EventArgs) Handles BtnHistoriService.Click
+    Private Sub BtnHistoriService_Click(sender As Object, e As EventArgs)
         FormHistoriService.ShowDialog()
     End Sub
 
     Private Sub pnlDataMaster_Paint(sender As Object, e As PaintEventArgs) Handles pnlDataMaster.Paint
-        Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.Gray, Drawing2D.LinearGradientMode.Vertical)
+        Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.Gray, Drawing2D.LinearGradientMode.BackwardDiagonal)
         e.Graphics.FillRectangle(i, Me.ClientRectangle)
     End Sub
 
     Private Sub pnlLaporan_Paint(sender As Object, e As PaintEventArgs) Handles pnlLaporan.Paint
-        Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.Gray, Drawing2D.LinearGradientMode.Vertical)
+        Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.Gray, Drawing2D.LinearGradientMode.ForwardDiagonal)
         e.Graphics.FillRectangle(i, Me.ClientRectangle)
     End Sub
+
+    Private Sub BtnHistoriService_Click_1(sender As Object, e As EventArgs) Handles BtnHistoriService.Click
+        FormHistoriService.ShowDialog()
+    End Sub
+
 
     'Private Sub FormMenuUtama_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
     '     Dim i As New System.Drawing.Drawing2D.LinearGradientBrush(Me.ClientRectangle, Color.Blue, Color.White, Drawing2D.LinearGradientMode.Vertical)

@@ -54,10 +54,20 @@ Partial Class FormMenuUtama
         Me.Btn_Barang = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Btn_User = New System.Windows.Forms.Button()
+        Me.pnlHome = New System.Windows.Forms.Panel()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.lblnama2 = New System.Windows.Forms.Label()
+        Me.lblTanggal = New System.Windows.Forms.Label()
+        Me.lblJam = New System.Windows.Forms.Label()
+        Me.lblnama1 = New System.Windows.Forms.Label()
         Me.pnlLaporan = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Btn_Histori = New System.Windows.Forms.Button()
+        Me.BtnHistoriService = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Btn_LapJasa = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -76,34 +86,22 @@ Partial Class FormMenuUtama
         Me.btnTransaksi = New System.Windows.Forms.Button()
         Me.btnDataMaster = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Btn_Service = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.pnlTransaksi = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.BtnHistoriService = New System.Windows.Forms.Button()
-        Me.pnlHome = New System.Windows.Forms.Panel()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.lblnama2 = New System.Windows.Forms.Label()
-        Me.lblTanggal = New System.Windows.Forms.Label()
-        Me.lblJam = New System.Windows.Forms.Label()
-        Me.lblnama1 = New System.Windows.Forms.Label()
+        Me.Btn_Service = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.pnlDataMaster.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.pnlHome.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLaporan.SuspendLayout()
         Me.pnlTop.SuspendLayout()
         Me.pnlControl.SuspendLayout()
         Me.pnlLeft.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTransaksi.SuspendLayout()
-        Me.pnlHome.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -390,12 +388,137 @@ Partial Class FormMenuUtama
         Me.Btn_User.TabIndex = 15
         Me.Btn_User.UseVisualStyleBackColor = False
         '
+        'pnlHome
+        '
+        Me.pnlHome.BackColor = System.Drawing.Color.White
+        Me.pnlHome.Controls.Add(Me.Label18)
+        Me.pnlHome.Controls.Add(Me.Label17)
+        Me.pnlHome.Controls.Add(Me.Label16)
+        Me.pnlHome.Controls.Add(Me.Label15)
+        Me.pnlHome.Controls.Add(Me.PictureBox2)
+        Me.pnlHome.Controls.Add(Me.lblnama2)
+        Me.pnlHome.Controls.Add(Me.lblTanggal)
+        Me.pnlHome.Controls.Add(Me.lblJam)
+        Me.pnlHome.Controls.Add(Me.lblnama1)
+        Me.pnlHome.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlHome.Location = New System.Drawing.Point(270, 37)
+        Me.pnlHome.Name = "pnlHome"
+        Me.pnlHome.Size = New System.Drawing.Size(726, 567)
+        Me.pnlHome.TabIndex = 26
+        '
+        'Label18
+        '
+        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label18.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.White
+        Me.Label18.Location = New System.Drawing.Point(712, 173)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(11, 233)
+        Me.Label18.TabIndex = 21
+        '
+        'Label17
+        '
+        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label17.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.White
+        Me.Label17.Location = New System.Drawing.Point(23, 173)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(11, 233)
+        Me.Label17.TabIndex = 20
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label16.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(23, 396)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(700, 10)
+        Me.Label16.TabIndex = 19
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label15.BackColor = System.Drawing.Color.LimeGreen
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.White
+        Me.Label15.Location = New System.Drawing.Point(23, 173)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(700, 10)
+        Me.Label15.TabIndex = 18
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox2.Image = Global.ApkServiceKendaraan.My.Resources.Resources._38834_service_animation
+        Me.PictureBox2.Location = New System.Drawing.Point(22, 173)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(701, 230)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
+        '
+        'lblnama2
+        '
+        Me.lblnama2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblnama2.AutoSize = True
+        Me.lblnama2.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.lblnama2.Font = New System.Drawing.Font("Segoe UI", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnama2.ForeColor = System.Drawing.Color.White
+        Me.lblnama2.Location = New System.Drawing.Point(23, 26)
+        Me.lblnama2.Name = "lblnama2"
+        Me.lblnama2.Size = New System.Drawing.Size(238, 65)
+        Me.lblnama2.TabIndex = 3
+        Me.lblnama2.Text = "APLIKASI"
+        '
+        'lblTanggal
+        '
+        Me.lblTanggal.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblTanggal.AutoSize = True
+        Me.lblTanggal.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.lblTanggal.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTanggal.ForeColor = System.Drawing.Color.White
+        Me.lblTanggal.Location = New System.Drawing.Point(509, 506)
+        Me.lblTanggal.Name = "lblTanggal"
+        Me.lblTanggal.Size = New System.Drawing.Size(188, 48)
+        Me.lblTanggal.TabIndex = 2
+        Me.lblTanggal.Text = "00:00:0000"
+        '
+        'lblJam
+        '
+        Me.lblJam.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblJam.AutoSize = True
+        Me.lblJam.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.lblJam.Font = New System.Drawing.Font("Segoe UI", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJam.ForeColor = System.Drawing.Color.White
+        Me.lblJam.Location = New System.Drawing.Point(425, 406)
+        Me.lblJam.Name = "lblJam"
+        Me.lblJam.Size = New System.Drawing.Size(298, 93)
+        Me.lblJam.TabIndex = 1
+        Me.lblJam.Text = "00:00:00"
+        '
+        'lblnama1
+        '
+        Me.lblnama1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblnama1.AutoSize = True
+        Me.lblnama1.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.lblnama1.Font = New System.Drawing.Font("Segoe UI", 28.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnama1.ForeColor = System.Drawing.Color.White
+        Me.lblnama1.Location = New System.Drawing.Point(21, 96)
+        Me.lblnama1.Name = "lblnama1"
+        Me.lblnama1.Size = New System.Drawing.Size(615, 74)
+        Me.lblnama1.TabIndex = 0
+        Me.lblnama1.Text = "SERVICE KENDARAAN"
+        '
         'pnlLaporan
         '
         Me.pnlLaporan.BackColor = System.Drawing.Color.White
-        Me.pnlLaporan.Controls.Add(Me.Label9)
         Me.pnlLaporan.Controls.Add(Me.Label10)
-        Me.pnlLaporan.Controls.Add(Me.Btn_Histori)
+        Me.pnlLaporan.Controls.Add(Me.BtnHistoriService)
+        Me.pnlLaporan.Controls.Add(Me.Label9)
         Me.pnlLaporan.Controls.Add(Me.Label12)
         Me.pnlLaporan.Controls.Add(Me.Btn_LapJasa)
         Me.pnlLaporan.Controls.Add(Me.Label13)
@@ -405,6 +528,29 @@ Partial Class FormMenuUtama
         Me.pnlLaporan.Name = "pnlLaporan"
         Me.pnlLaporan.Size = New System.Drawing.Size(726, 567)
         Me.pnlLaporan.TabIndex = 26
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(454, 260)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(179, 38)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "History Service"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BtnHistoriService
+        '
+        Me.BtnHistoriService.BackColor = System.Drawing.Color.Silver
+        Me.BtnHistoriService.FlatAppearance.BorderSize = 0
+        Me.BtnHistoriService.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnHistoriService.Image = Global.ApkServiceKendaraan.My.Resources.Resources.lap_denda
+        Me.BtnHistoriService.Location = New System.Drawing.Point(454, 79)
+        Me.BtnHistoriService.Name = "BtnHistoriService"
+        Me.BtnHistoriService.Size = New System.Drawing.Size(179, 190)
+        Me.BtnHistoriService.TabIndex = 19
+        Me.BtnHistoriService.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -417,29 +563,6 @@ Partial Class FormMenuUtama
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "Laporan"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(450, 260)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(179, 38)
-        Me.Label10.TabIndex = 20
-        Me.Label10.Text = "Histori"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Btn_Histori
-        '
-        Me.Btn_Histori.BackColor = System.Drawing.Color.Silver
-        Me.Btn_Histori.FlatAppearance.BorderSize = 0
-        Me.Btn_Histori.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Histori.Image = Global.ApkServiceKendaraan.My.Resources.Resources.kategori_buku
-        Me.Btn_Histori.Location = New System.Drawing.Point(450, 79)
-        Me.Btn_Histori.Name = "Btn_Histori"
-        Me.Btn_Histori.Size = New System.Drawing.Size(179, 190)
-        Me.Btn_Histori.TabIndex = 19
-        Me.Btn_Histori.UseVisualStyleBackColor = False
         '
         'Label12
         '
@@ -680,18 +803,6 @@ Partial Class FormMenuUtama
         Me.Label8.Text = "Transaksi"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Btn_Service
-        '
-        Me.Btn_Service.BackColor = System.Drawing.Color.Silver
-        Me.Btn_Service.FlatAppearance.BorderSize = 0
-        Me.Btn_Service.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Service.Image = Global.ApkServiceKendaraan.My.Resources.Resources.lap_denda
-        Me.Btn_Service.Location = New System.Drawing.Point(30, 79)
-        Me.Btn_Service.Name = "Btn_Service"
-        Me.Btn_Service.Size = New System.Drawing.Size(179, 190)
-        Me.Btn_Service.TabIndex = 15
-        Me.Btn_Service.UseVisualStyleBackColor = False
-        '
         'Label11
         '
         Me.Label11.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
@@ -706,8 +817,6 @@ Partial Class FormMenuUtama
         'pnlTransaksi
         '
         Me.pnlTransaksi.BackColor = System.Drawing.Color.White
-        Me.pnlTransaksi.Controls.Add(Me.Label2)
-        Me.pnlTransaksi.Controls.Add(Me.BtnHistoriService)
         Me.pnlTransaksi.Controls.Add(Me.Label11)
         Me.pnlTransaksi.Controls.Add(Me.Btn_Service)
         Me.pnlTransaksi.Controls.Add(Me.Label8)
@@ -717,153 +826,17 @@ Partial Class FormMenuUtama
         Me.pnlTransaksi.Size = New System.Drawing.Size(726, 567)
         Me.pnlTransaksi.TabIndex = 25
         '
-        'Label2
+        'Btn_Service
         '
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(242, 260)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(179, 38)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "History Service"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnHistoriService
-        '
-        Me.BtnHistoriService.BackColor = System.Drawing.Color.Silver
-        Me.BtnHistoriService.FlatAppearance.BorderSize = 0
-        Me.BtnHistoriService.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnHistoriService.Image = Global.ApkServiceKendaraan.My.Resources.Resources.lap_denda
-        Me.BtnHistoriService.Location = New System.Drawing.Point(242, 79)
-        Me.BtnHistoriService.Name = "BtnHistoriService"
-        Me.BtnHistoriService.Size = New System.Drawing.Size(179, 190)
-        Me.BtnHistoriService.TabIndex = 17
-        Me.BtnHistoriService.UseVisualStyleBackColor = False
-        '
-        'pnlHome
-        '
-        Me.pnlHome.BackColor = System.Drawing.Color.White
-        Me.pnlHome.Controls.Add(Me.Label18)
-        Me.pnlHome.Controls.Add(Me.Label17)
-        Me.pnlHome.Controls.Add(Me.Label16)
-        Me.pnlHome.Controls.Add(Me.Label15)
-        Me.pnlHome.Controls.Add(Me.PictureBox2)
-        Me.pnlHome.Controls.Add(Me.lblnama2)
-        Me.pnlHome.Controls.Add(Me.lblTanggal)
-        Me.pnlHome.Controls.Add(Me.lblJam)
-        Me.pnlHome.Controls.Add(Me.lblnama1)
-        Me.pnlHome.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlHome.Location = New System.Drawing.Point(270, 37)
-        Me.pnlHome.Name = "pnlHome"
-        Me.pnlHome.Size = New System.Drawing.Size(726, 567)
-        Me.pnlHome.TabIndex = 26
-        '
-        'Label18
-        '
-        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label18.BackColor = System.Drawing.Color.YellowGreen
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(712, 173)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(11, 233)
-        Me.Label18.TabIndex = 21
-        '
-        'Label17
-        '
-        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label17.BackColor = System.Drawing.Color.YellowGreen
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(23, 173)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(11, 233)
-        Me.Label17.TabIndex = 20
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label16.BackColor = System.Drawing.Color.YellowGreen
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(23, 396)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(700, 10)
-        Me.Label16.TabIndex = 19
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label15.BackColor = System.Drawing.Color.YellowGreen
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(23, 173)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(700, 10)
-        Me.Label15.TabIndex = 18
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.Image = Global.ApkServiceKendaraan.My.Resources.Resources._20221208_142508
-        Me.PictureBox2.Location = New System.Drawing.Point(22, 173)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(701, 230)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
-        '
-        'lblnama2
-        '
-        Me.lblnama2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblnama2.AutoSize = True
-        Me.lblnama2.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.lblnama2.Font = New System.Drawing.Font("Segoe UI", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblnama2.ForeColor = System.Drawing.Color.White
-        Me.lblnama2.Location = New System.Drawing.Point(23, 26)
-        Me.lblnama2.Name = "lblnama2"
-        Me.lblnama2.Size = New System.Drawing.Size(238, 65)
-        Me.lblnama2.TabIndex = 3
-        Me.lblnama2.Text = "APLIKASI"
-        '
-        'lblTanggal
-        '
-        Me.lblTanggal.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblTanggal.AutoSize = True
-        Me.lblTanggal.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.lblTanggal.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTanggal.ForeColor = System.Drawing.Color.White
-        Me.lblTanggal.Location = New System.Drawing.Point(509, 506)
-        Me.lblTanggal.Name = "lblTanggal"
-        Me.lblTanggal.Size = New System.Drawing.Size(188, 48)
-        Me.lblTanggal.TabIndex = 2
-        Me.lblTanggal.Text = "00:00:0000"
-        '
-        'lblJam
-        '
-        Me.lblJam.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblJam.AutoSize = True
-        Me.lblJam.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.lblJam.Font = New System.Drawing.Font("Segoe UI", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJam.ForeColor = System.Drawing.Color.White
-        Me.lblJam.Location = New System.Drawing.Point(425, 406)
-        Me.lblJam.Name = "lblJam"
-        Me.lblJam.Size = New System.Drawing.Size(298, 93)
-        Me.lblJam.TabIndex = 1
-        Me.lblJam.Text = "00:00:00"
-        '
-        'lblnama1
-        '
-        Me.lblnama1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblnama1.AutoSize = True
-        Me.lblnama1.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.lblnama1.Font = New System.Drawing.Font("Segoe UI", 28.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblnama1.ForeColor = System.Drawing.Color.White
-        Me.lblnama1.Location = New System.Drawing.Point(21, 96)
-        Me.lblnama1.Name = "lblnama1"
-        Me.lblnama1.Size = New System.Drawing.Size(615, 74)
-        Me.lblnama1.TabIndex = 0
-        Me.lblnama1.Text = "SERVICE KENDARAAN"
+        Me.Btn_Service.BackColor = System.Drawing.Color.Silver
+        Me.Btn_Service.FlatAppearance.BorderSize = 0
+        Me.Btn_Service.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Service.Image = Global.ApkServiceKendaraan.My.Resources.Resources.lap_denda
+        Me.Btn_Service.Location = New System.Drawing.Point(30, 79)
+        Me.Btn_Service.Name = "Btn_Service"
+        Me.Btn_Service.Size = New System.Drawing.Size(179, 190)
+        Me.Btn_Service.TabIndex = 15
+        Me.Btn_Service.UseVisualStyleBackColor = False
         '
         'Timer2
         '
@@ -894,6 +867,9 @@ Partial Class FormMenuUtama
         Me.pnlDataMaster.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.pnlHome.ResumeLayout(False)
+        Me.pnlHome.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlLaporan.ResumeLayout(False)
         Me.pnlTop.ResumeLayout(False)
         Me.pnlControl.ResumeLayout(False)
@@ -901,9 +877,6 @@ Partial Class FormMenuUtama
         Me.pnlLeft.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlTransaksi.ResumeLayout(False)
-        Me.pnlHome.ResumeLayout(False)
-        Me.pnlHome.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -933,8 +906,6 @@ Partial Class FormMenuUtama
     Friend WithEvents Btn_User As Button
     Friend WithEvents pnlLaporan As Panel
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Btn_Histori As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents Btn_LapJasa As Button
     Friend WithEvents Label13 As Label
@@ -975,6 +946,6 @@ Partial Class FormMenuUtama
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Timer3 As Timer
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Label10 As Label
     Friend WithEvents BtnHistoriService As Button
 End Class

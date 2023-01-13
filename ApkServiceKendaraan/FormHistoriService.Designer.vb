@@ -310,6 +310,7 @@ Partial Class FormHistoriService
         Me.Controls.Add(Me.DGVBarang)
         Me.Controls.Add(Me.Label2)
         Me.Name = "FormHistoriService"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormHistoriService"
         CType(Me.DGVJasa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGVBarang, System.ComponentModel.ISupportInitialize).EndInit()

@@ -140,7 +140,4 @@ Public Class FormAdmin
         ComboBox1.Text = DGV.Rows(e.RowIndex).Cells(3).Value
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
 End Class

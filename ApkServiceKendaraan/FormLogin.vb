@@ -13,7 +13,6 @@ Public Class FormLogin
         FormMenuUtama.BtnHistoriService.Enabled = True
         FormMenuUtama.Btn_LapBarang.Enabled = True
         FormMenuUtama.Btn_LapJasa.Enabled = True
-        FormMenuUtama.Btn_Histori.Enabled = True
         FormMenuUtama.btnDataMaster.Enabled = True
         FormMenuUtama.btnTransaksi.Enabled = True
         FormMenuUtama.btnLaporan.Enabled = True
@@ -88,10 +87,13 @@ Public Class FormLogin
     End Sub
 
     Private Sub TxtNama_MouseClick(sender As Object, e As MouseEventArgs) Handles TxtNama.MouseClick
-        If TxtNama.Text = "Username" Or TxtNama.Text = "" Then
+        If TxtNama.Text = "Username" Then
             TxtNama.Clear()
             TxtNama.ForeColor = Color.Black
         End If
     End Sub
 
+    Private Sub LogoPictureBox_Click(sender As Object, e As EventArgs) Handles LogoPictureBox.Click
+
+    End Sub
 End Class
